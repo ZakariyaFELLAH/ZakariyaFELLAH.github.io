@@ -1,11 +1,21 @@
 /* ===== Global ===== */
 body {
   font-family: 'Source Code Pro', monospace, Arial, sans-serif;
-  background-color: #00040B;
+  background-color: #161616;
   color: #00fdc6;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
 }
 
 /* ===== Retour ===== */
@@ -18,6 +28,7 @@ body {
   display: inline-block;
   margin-top: 30px;
   transition: 0.3s;
+  text-decoration-line: none;
 }
 
 #return:hover {

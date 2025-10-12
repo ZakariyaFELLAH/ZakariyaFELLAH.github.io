@@ -78,7 +78,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
   margin-top: 5px;
   border: 1px solid #00fdc6;
   border-radius: 5px;
-  background-color: #00131A;
+    background-color: #1a1a1a;
   color: #00fdc6;
 }
 

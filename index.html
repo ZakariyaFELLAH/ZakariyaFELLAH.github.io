@@ -1,38 +1,66 @@
-<html>
-    <head>
-        
-        <Title>FELLAH ZAKARIYA</Title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-    <body style="background-color: rgb(185, 189, 192);">
-        <img src="images-2.png">
-     
-     <h3><b>Nom:</b><i> FELLAH</i></h3>
-     <h3><b>Prénom:</b><i> Zakariya</i></h3>
-     <h3><a href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank">Linkedin</a></h3>
-    
-        <a href="Contact.html"><button>Contact</button></a>
-     
-     <h2><em>Compétences</em></h2>
-        <h3><ul>
-            <li>RGPD</li>
-            <li>HTML</li>
-            <li>PYTHON</li>
-            <li>PACK OFFICE</li>
-            <li>CISCO PACKET TRACER</li>
-            
-        </ul></h3> 
-    <h2><em>Formation</em></h2>
-    <br>
-    <h3><i>Formation BTS SIO -> </i><a href="https://pia.ac-paris.fr/serail/jcms/s2_271354/fr/accueil"  target="_blank">Lycée GT Turgot 75003 PARIS</a></h3>
-    <br>
-    <h3><i>Formation STMG -> </i><a href="https://lyc-eiffel-rueil.ac-versailles.fr/"  target="_blank">Lycée LPO Gustave Eiffel 92500 Rueil-Malmaison</a></h3>
-    <br>
-    <h3><i>Formation collège -> </i><a href="https://pia.ac-paris.fr/serail/jcms/s2_122940/fr/accueil"  target="_blank">Collège JEAN PERRIN</a></h3>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio – Fellah Zakariya</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- Image de profil -->
+  <img src="images-2.png" alt="Photo de Zakariya" class="profile-img">
+
+  <!-- En-tête -->
+  <header class="NP">
+    <h1 class="name"><span>Fellah</span> Zakariya</h1>
+    <h2 class="subtitle">Étudiant SIO – Passionné de cybersécurité et d’informatique</h2>
+    <div class="links">
+      <a class="lkn" href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank">LinkedIn</a>
+      <a id="ct" href="Contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- Section Informations -->
+  <div class="Title">
+    <h2>INFORMATIONS</h2>
+    <hr>
+  </div>
+
+  <!-- Conteneur principal -->
+  <main>
+    <!-- Bloc Compétences -->
+    <div class="CMP">
+      <div class="CMPp"><h3><u>COMPÉTENCES</u></h3></div>
+      <fieldset class="R1">
+        <legend><h4>CODE</h4></legend>
+        <p><i>HTML</i></p>
+        <p><i>PYTHON</i></p>
+        <p><i>CSS</i></p>
+      </fieldset>
+      <fieldset class="R2">
+        <legend><h4>AUTRE</h4></legend>
+        <p><i>CISCO PACKET TRACER</i></p>
+        <p><i>PACK OFFICE</i></p>
+        <p><i>FREEPLANE</i></p>
+      </fieldset>
+    </div>
+
+    <!-- Bloc Formation -->
+    <div class="FMN">
+      <div class="FMNn"><h3><u>FORMATION</u></h3></div>
+      <fieldset class="R3">
+        <p>
+          <a class="lkn1" href="https://lyc-eiffel-rueil.ac-versailles.fr/" target="_blank"><i>SECONDAIRE</i></a><br>
+          <small>2023 - 2025</small>
+        </p>
+        <br>
+        <p>
+          <a class="lkn2" href="https://pia.ac-paris.fr/serail/jcms/s2_271354/fr/accueil" target="_blank"><i>SUPÉRIEUR</i></a><br>
+          <small>2025 - 2027</small>
+        </p>
+      </fieldset>
+    </div>
+  </main>
+</body>
 </html>

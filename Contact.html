@@ -6,10 +6,19 @@
   <link rel="stylesheet" href="Ctc.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+  function transitionTo(url) {
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+      window.location.href = url;
+    }, 500); // Durée identique à celle du CSS
+  }
+</script>
+
 
 <body>
   <!-- Retour vers le portfolio -->
-  <a href="index.html"><p id="return">RETOUR</p></a>
+  <a id ="return" href="index.html" onclick="event.preventDefault(); transitionTo('index.html');" class="but">RETOUR</a>
 
   <!-- Formulaire -->
   <div class="Form">

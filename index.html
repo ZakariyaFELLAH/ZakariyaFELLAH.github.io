@@ -6,6 +6,14 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+  function transitionTo(url) {
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+      window.location.href = url;
+    }, 500); // Durée identique à celle du CSS
+  }
+</script>
 
 <body>
   <!-- Image de profil -->
@@ -17,7 +25,7 @@
     <h2 class="subtitle">Étudiant SIO – Passionné de cybersécurité et d’informatique</h2>
     <div class="links">
       <a class="lkn" href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank">LinkedIn</a>
-      <a id="ct" href="Contact.html">Contact</a>
+      <a id ="ct" href="contact.html" onclick="event.preventDefault(); transitionTo('contact.html');" class="lkn">Contact</a>
     </div>
   </header>
 
@@ -64,7 +72,3 @@
   </main>
 </body>
 </html>
-
-git add .
-git commit -m "Trigger rebuild"
-git push

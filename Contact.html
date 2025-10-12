@@ -1,33 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head><title>Formulaire Contact</title></head>
-        <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-    <body style="background-color: rgb(185, 189, 192);">
-             
-            <a href="index.html"> <button>CV</button> </a>
-            <br>
-            <h2><em><b>Formulaire de Contact</b></em></h2>
-            <fieldset><legend><b><i>SAISIR INFORMATION</i></b></legend><label><input id="M." type="radio" name="M.-MMe." value="M."><i> M.</i></label>
-              <label><input id="Mme." type="radio" name="M.-MMe." value="Mme."><i> Mme.</i></label>
-            <br>
-            <br>
-            <legend><i>Nom:</i></legend><label><input type="Saisir ici"></label>
-            <br>
-            <br>
-            <legend><i>Prénom:</i></legend><label><input type="Saisir ici"></label>
-            <br>
-            <br>
-            <legend><i>E-mail:</i></legend><label><input type="Saisir ici"></label>
-            <br>
-            <br>
-            <legend><i>Num tel:</i></legend><label><input type="Saisir ici"></label></fieldset>
-            <br>
-            <br>
-            <br>
-            <button><b>Envoyer</b></button>
-        </body>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact – Fellah Zakariya</title>
+  <link rel="stylesheet" href="Ctc.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- Retour vers le portfolio -->
+  <a href="index.html"><p id="return">RETOUR</p></a>
+
+  <!-- Formulaire -->
+  <div class="Form">
+    <h2><em><b>Formulaire de Contact</b></em></h2>
+    <form action="/submit-form" method="POST">
+      <fieldset>
+        <legend><b><i>SAISIR INFORMATION</i></b></legend>
+        <label><input type="radio" name="genre" value="M."><i> M.</i></label>
+        <label><input type="radio" name="genre" value="Mme."><i> Mme.</i></label>
+
+        <br><br>
+        <legend><i><b>Nom:</b></i></legend>
+        <label><input type="text" name="nom" required minlength="1"></label>
+
+        <br><br>
+        <legend><i><b>Prénom:</b></i></legend>
+        <label><input type="text" name="prenom" required minlength="1"></label>
+
+        <br><br>
+        <legend><i><b>E-mail:</b></i></legend>
+        <label><input type="email" name="email" required minlength="7">
+        <small>abc@123.xxx</small></label>
+
+        <br><br>
+        <legend><i><b>Num tel:</b></i></legend>
+        <label><input type="tel" name="tel" required pattern="\+[0-9]{2} [0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}">
+        <br><small>+33 xx-xx-xx-xx-xx</small></label>
+      </fieldset>
+
+      <br>
+      <label for="message"><i><b>Message:</b></i></label>
+      <textarea name="message" id="message" required minlength="1" maxlength="1000" rows="5"></textarea>
+
+      <br><br>
+      <div class="but">
+        <input type="submit" value="Envoyer">
+      </div>
+    </form>
+  </div>
+</body>
 </html>

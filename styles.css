@@ -1,13 +1,22 @@
 /* ===== Global ===== */
 body {
   font-family: 'Source Code Pro', monospace, Arial, sans-serif;
-  background-color: #0d0d0d;
+  background-color: #161616;
   color: #00fdc6;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-/* ===== ssss ===== */
+
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
 /* ===== Image ===== */
 .profile-img {
   position: absolute;
@@ -59,6 +68,26 @@ body {
   text-decoration: none;
   color: #00fdc6;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.lkn1, .lkn2{
+
+  text-decoration-line: none;
+  color: #00fdc6;
+}
+
+.lkn1:hover, .lkn2:hover{
+
+  text-decoration-line: none;
+  color: #ffffff;
+}
+
+
+.lkn:hover, #ct:hover {
+  background-color: #00fdc6;
+  color: black;
+  box-shadow: 0 0 20px #00fdc6;
 }
 
 .lkn:hover, #ct:hover {
@@ -143,4 +172,3 @@ legend {
     font-size: 2.2em;
   }
 }
-

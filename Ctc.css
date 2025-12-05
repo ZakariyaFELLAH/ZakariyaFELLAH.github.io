@@ -6,7 +6,7 @@ input[type="radio"] {
 input[type="radio"]:checked {
   accent-color: #888888;
 }
-/* ===== Thème ===== */
+/* ===== ThÃ¨me ===== */
 :root {
   --neon: #00fdc6;
   --bg: #161616;
@@ -159,7 +159,7 @@ input[type="checkbox"].checker:checked {
 .contact-footer { padding: 20px; }
 .footer__text { color: var(--text); }
 
-/* ====== Responsive ====== */
+/* ===== Responsive ===== */
 @media screen and (max-width: 600px) {
   .Form { width: 95%; padding: 20px; }
 }

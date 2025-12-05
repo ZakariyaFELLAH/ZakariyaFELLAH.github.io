@@ -1,62 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Contact – Fellah Zakariya</title>
-  <link rel="stylesheet" href="Ctc.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Ctc.css" />
 </head>
-<script>
-  function transitionTo(url) {
-    document.body.classList.add('fade-out');
-    setTimeout(() => {
-      window.location.href = url;
-    }, 500); // Durée identique à celle du CSS
-  }
-</script>
-
-
 <body>
-  <!-- Retour vers le portfolio -->
-  <a id ="return" href="index.html" onclick="event.preventDefault(); transitionTo('index.html');" class="but">RETOUR</a>
+  <!-- Canvas fond (optionnel) -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- Retour -->
+  <header class="contact-header">
+    <a id="return" href="index.html" class="but">Retour</a>
+  </header>
 
   <!-- Formulaire -->
-  <div class="Form">
-    <h2><em><b>Formulaire de Contact</b></em></h2>
+  <main class="Form">
+    <h2><em><b>Formulaire de contact</b></em></h2>
     <form action="/submit-form" method="POST">
       <fieldset>
-        <legend><b><i>SAISIR INFORMATION</i></b></legend>
-        <label><input type="radio" name="genre" value="M."><i> M.</i></label>
-        <label><input type="radio" name="genre" value="Mme."><i> Mme.</i></label>
+        <legend><b><i>Identité</i></b></legend>
 
-        <br><br>
-        <legend><i><b>Nom:</b></i></legend>
-        <label><input type="text" name="nom" required minlength="1"></label>
+        <div class="inline">
+          <label><input type="radio" name="genre" value="M." /> <i>M.</i></label>
+          <label><input type="radio" name="genre" value="Mme." /> <i>Mme.</i></label>
+        </div>
 
-        <br><br>
-        <legend><i><b>Prénom:</b></i></legend>
-        <label><input type="text" name="prenom" required minlength="1"></label>
+        <label class="block">
+          <span><i><b>Nom</b></i> <small>(obligatoire)</small></span>
+          <input type="text" name="nom" required minlength="1" placeholder="ex: Dupont" />
+        </label>
 
-        <br><br>
-        <legend><i><b>E-mail:</b></i></legend>
-        <label><input type="email" name="email" required minlength="7">
-        <small>abc@123.xxx</small></label>
+        <label class="block">
+          <span><i><b>Prénom</b></i> <small>(obligatoire)</small></span>
+          <input type="text" name="prenom" required minlength="1" placeholder="ex: Albert" />
+        </label>
 
-        <br><br>
-        <legend><i><b>Num tel:</b></i></legend>
-        <label><input type="tel" name="tel" required pattern="\+[0-9]{2} [0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}">
-        <br><small>+33 xx-xx-xx-xx-xx</small></label>
+        <label class="block">
+          <span><i><b>E-mail</b></i> <small>(obligatoire)</small></span>
+          <input type="email" name="email" required minlength="7" placeholder="ex: abc@123.xxx" title="Entrez une adresse e-mail valide (ex: abc@123.xxx)" />
+        </label>
+
+        <label class="block">
+          <span><i><b>Numéro de téléphone</b></i> <small>(facultatif)</small></span>
+          <input type="tel" name="tel"
+            pattern="^\+33\s[1-9](\s?\d{2}){4}$"
+            placeholder="ex: +33 X XX XX XX XX"
+            title="Format: +33 X XX XX XX XX (espaces acceptés)" />
+        </label>
       </fieldset>
 
-      <br>
-      <label for="message"><i><b>Message:</b></i></label>
-      <textarea name="message" id="message" required minlength="1" maxlength="1000" rows="5"></textarea>
+      <label class="block" for="message">
+        <span><i><b>Message</b></i></span>
+        <textarea name="message" id="message" required minlength="1" maxlength="1000" rows="5" placeholder="Écrivez votre message ici..."></textarea>
+      </label>
 
-      <br><br>
+      <label class="block agree">
+        <input type="checkbox" class="checker" required />
+        <span style="display:inline-block">
+          <i>En cochant cette case, vous acceptez les
+            <a class="CG" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener"><b>Conditions Générales</b></a>
+            liées au traitement de vos données.</i>
+        </span>
+      </label>
+
       <div class="but">
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Envoyer" />
       </div>
     </form>
-  </div>
+  </main>
+
+  <footer class="contact-footer">
+    <p class="footer__text">© 2025 Fellah Zakariya</p>
+  </footer>
+
+  <script>
+    // Transition retour
+    const ret = document.getElementById('return');
+    ret.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => { window.location.href = this.href; }, 500);
+    });
+
+    // Nouveau motif de fond : cercles néon animés
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    let t = 0;
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const maxRadius = Math.min(canvas.width, canvas.height) * 0.45;
+      for (let i = 0; i < 8; i++) {
+        const radius = maxRadius * (0.2 + 0.1 * i) + Math.sin(t / 30 + i) * 18;
+        ctx.save();
+        ctx.globalAlpha = 0.13 + 0.07 * Math.abs(Math.sin(t / 40 + i));
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.strokeStyle = `hsl(${160 + i * 10}, 100%, 60%)`;
+        ctx.shadowColor = '#00fdc6';
+        ctx.shadowBlur = 18;
+        ctx.lineWidth = 3 + 1.5 * Math.sin(t / 25 + i);
+        ctx.stroke();
+        ctx.restore();
+      }
+      t += 1.2;
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
 </body>
 </html>

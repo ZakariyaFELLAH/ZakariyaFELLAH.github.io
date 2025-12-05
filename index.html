@@ -1,74 +1,537 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
   <title>Portfolio – Fellah Zakariya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<script>
-  function transitionTo(url) {
-    document.body.classList.add('fade-out');
-    setTimeout(() => {
-      window.location.href = url;
-    }, 500); // Durée identique à celle du CSS
-  }
-</script>
-
 <body>
-  <!-- Image de profil -->
-  <img src="images-2.png" alt="Photo de Zakariya" class="profile-img">
+  <!-- Fond grille animée -->
+  <div class="grid-bg" aria-hidden="true"></div>
 
-  <!-- En-tête -->
-  <header class="NP">
-    <h1 class="name"><span>Fellah</span> Zakariya</h1>
-    <h2 class="subtitle">Étudiant SIO – Passionné de cybersécurité et d’informatique</h2>
-    <div class="links">
-      <a class="lkn" href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank">LinkedIn</a>
-      <a id ="ct" href="Contact.html" onclick="event.preventDefault(); transitionTo('Contact.html');" class="lkn">Contact</a>
-    </div>
+  <!-- Barre de navigation -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav__brand" href="index.html" onclick="navigateWithFadeShort('index.html'); return false;" aria-label="Aller à l'accueil">
+        <i class="ri-terminal-box-line"></i> FZ
+      </a>
+      <ul class="nav__links">
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#formation">Formation</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a class="social-btn" href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="ri-linkedin-box-fill social-icon animated" aria-hidden="true"></i>
+        </a>
+        <a class="social-btn" href="https://github.com/ZakariyaFELLAH" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="ri-github-fill social-icon animated" aria-hidden="true"></i>
+        </a>
+        <a class="social-btn" id="contactBtn" href="Contact.html" onclick="navigateWithFade('Contact.html'); return false;" aria-label="Contact">
+          <i class="ri-mail-line social-icon animated" aria-hidden="true"></i>
+        </a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Section Informations -->
-  <div class="Title">
-    <h2>INFORMATIONS</h2>
-    <hr>
+  <!-- Hero / Présentation -->
+  <section id="presentation" class="hero">
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1 class="hero__name"><span>FELLAH</span> Zakariya</h1>
+        <p class="hero__subtitle">
+          <span id="typing" aria-live="polite"></span>
+        </p>
+      </div>
+      <figure class="hero__figure">
+        <img src="images-2.png" alt="Photo de profil - Zakariya Fellah" class="profile-image">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Bloc informations avec bouton CV -->
+  <div class="infos-section">
+    <div class="btn-group">
+      <a href="cv.pdf" download class="btn btn--primary btn--download">
+        <i class="ri-download-cloud-line"></i> Télécharger CV
+      </a>
+      <a href="Tableau de synthèse.pdf" class="btn btn--primary btn--download" target="_blank">
+        <i class="ri-bar-chart-line"></i> Tableau de synthèse
+      </a>
+    </div>
+    <section class="panel panel--title" aria-labelledby="infos-title">
+      <div class="panel__header">
+        <h2 id="infos-title">Informations</h2>
+      </div>
+    </section>
   </div>
 
-  <!-- Conteneur principal -->
   <main>
-    <!-- Bloc Compétences -->
-    <div class="CMP">
-      <div class="CMPp"><h3><u>COMPÉTENCES</u></h3></div>
-      <fieldset class="R1">
-        <legend><h4>CODE</h4></legend>
-        <p><i>HTML</i></p>
-        <p><i>PYTHON</i></p>
-        <p><i>CSS</i></p>
-      </fieldset>
-      <fieldset class="R2">
-        <legend><h4>AUTRE</h4></legend>
-        <p><i>CISCO PACKET TRACER</i></p>
-        <p><i>PACK OFFICE</i></p>
-        <p><i>FREEPLANE</i></p>
-      </fieldset>
-    </div>
+    <!-- Compétences -->
+    <section id="competences" class="section">
+      <div class="competences-container">
+        <header class="competences-header">
+          <h2 class="competences-title"><i class="ri-code-s-slash-line"></i> Compétences</h2>
+        </header>
+        <div class="competences-grid">
+          <!-- DÉVELOPPEMENT -->
+          <div class="competence-section">
+            <div class="competence-wrapper">
+              <h3 class="competences-category-title">Développement</h3>
+              <div class="competences-separator"></div>
+              <div class="orbit-container">
+                <!-- Orbites -->
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                
+                <!-- Centre -->
+                <div class="orbit-center">
+                  <i class="ri-code-s-slash-line"></i>
+                </div>
+                
+                <!-- Compétences Web -->
+                <div class="skill-item skill-1" title="HTML5"><i class="ri-html5-line"></i></div>
+                <div class="skill-item skill-2" title="CSS3"><i class="ri-css3-line"></i></div>
+                <div class="skill-item skill-3" title="JavaScript"><i class="ri-javascript-line"></i></div>
+                <div class="skill-item skill-4" title="PHP"><i class="ri-php-line"></i></div>
+                <div class="skill-item skill-5" title="MySQL"><i class="ri-database-fill"></i></div>
+                <div class="skill-item skill-6" title="Python"><i class="ri-python-line"></i></div>
+                <div class="skill-item skill-7"><i class="ri-code-s-slash-line"></i></div>
+              </div>
+            </div>
+            <div class="legend-sidebar">
+              <div class="legend-title">Légende</div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-html5-line"></i></div>
+                <span class="sidebar-legend-item__text">HTML5</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-css3-line"></i></div>
+                <span class="sidebar-legend-item__text">CSS3</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-javascript-line"></i></div>
+                <span class="sidebar-legend-item__text">JavaScript</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-php-line"></i></div>
+                <span class="sidebar-legend-item__text">PHP</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-database-fill"></i></div>
+                <span class="sidebar-legend-item__text">DataBase</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-python-line"></i></div>
+                <span class="sidebar-legend-item__text">Python</span>
+              </div>
+            </div>
+          </div>
 
-    <!-- Bloc Formation -->
-    <div class="FMN">
-      <div class="FMNn"><h3><u>FORMATION</u></h3></div>
-      <fieldset class="R3">
-        <p>
-          <a class="lkn1" href="https://lyc-eiffel-rueil.ac-versailles.fr/" target="_blank"><i>SECONDAIRE</i></a><br>
-          <small>2023 - 2025</small>
-        </p>
-        <br>
-        <p>
-          <a class="lkn2" href="https://pia.ac-paris.fr/serail/jcms/s2_271354/fr/accueil" target="_blank"><i>SUPÉRIEUR</i></a><br>
-          <small>2025 - 2027</small>
-        </p>
-      </fieldset>
-    </div>
+          <!-- CYBERSÉCURITÉ -->
+          <div class="competence-section">
+            <div class="competence-wrapper">
+              <h3 class="competences-category-title">Cybersécurité</h3>
+              <div class="competences-separator"></div>
+              <div class="orbit-container">
+                <!-- Orbites -->
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                
+                <!-- Centre -->
+                <div class="orbit-center">
+                  <i class="ri-shield-line"></i>
+                </div>
+                
+                <!-- Compétences Cybersécurité -->
+                <div class="skill-item skill-1" title="Penetration Testing"><i class="ri-bug-line"></i></div>
+                <div class="skill-item skill-2" title="Network Security"><i class="ri-router-line"></i></div>
+                <div class="skill-item skill-3" title="Forensics"><i class="ri-search-line"></i></div>
+                <div class="skill-item skill-4" title="Firewall"><i class="ri-shield-keyhole-line"></i></div>
+                <div class="skill-item skill-5" title="Encryption"><i class="ri-lock-line"></i></div>
+                <div class="skill-item skill-6" title="Vulnerability Assessment"><i class="ri-alert-line"></i></div>
+                <div class="skill-item skill-7" title="Threat Analysis"><i class="ri-radar-line"></i></div>
+              </div>
+            </div>
+            <div class="legend-sidebar">
+              <div class="legend-title">Légende</div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-bug-line"></i></div>
+                <span class="sidebar-legend-item__text">Pen Testing</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-router-line"></i></div>
+                <span class="sidebar-legend-item__text">Network Sec</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-search-line"></i></div>
+                <span class="sidebar-legend-item__text">Steganography</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-shield-keyhole-line"></i></div>
+                <span class="sidebar-legend-item__text">Web exploit</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-lock-line"></i></div>
+                <span class="sidebar-legend-item__text">Encryption</span>
+              </div>
+              <div class="sidebar-legend-item">
+                <div class="sidebar-legend-item__icon"><i class="ri-alert-line"></i></div>
+                <span class="sidebar-legend-item__text">Vuln Assess</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AUTRES -->
+          <div class="competence-section">
+            <div class="competence-wrapper">
+              <h3 class="competences-category-title">Autres</h3>
+              <div class="competences-separator"></div>
+              <ul class="competences-list">
+                <li class="competence-item">
+                  <i class="ri-git-branch-line"></i>
+                  <span>Git</span>
+                </li>
+                <li class="competence-item">
+                  <i class="ri-linux-line"></i>
+                  <span>Linux</span>
+                </li>
+                <li class="competence-item">
+                  <i class="ri-router-line"></i>
+                  <span>Simulation avec Packet Tracer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section">
+      <header class="section__header">
+        <h3 class="section__title"><i class="ri-folder-3-line"></i> Projets</h3>
+      </header>
+
+      <div class="projects-container">
+        <!-- Projet 1: GitHub -->
+        <article class="project-card">
+          <div class="project-card__left">
+            <a href="https://thomas-merlen.github.io/projet-gestionnaire-tache/" class="project-image-link">
+              <img src="GDT- 2025.png" alt="Gestionnaire de Tâches" class="project-image">
+            </a>
+          </div>
+          <div class="project-card__right">
+            <div class="project-card__header">
+              <h2 class="project-card__title"><i class="ri-github-fill"></i> Gestionnaire de Tâches</h2>
+              <p class="project-card__subtitle">Projet WEB Collaboratif</p>
+            </div>
+            <p class="project-card__description">
+              Création d'une application web complète de gestion de tâches développée en collaboration avec <a href="https://thomas-merlen.github.io/" class="project-link" target="_blank">Thomas MERLEN</a> et <a href="https://matthieu-merlen.github.io/" class="project-link" target="_blank">Matthieu MERLEN</a>.
+            </p>
+            <div class="project-card__features">
+              <h3 class="project-card__features-title">Fonctionnalités principales :</h3>
+              <ul class="project-card__list">
+                <li>Création, édition et suppression de tâches</li>
+                <li>Système de catégorisation</li>
+                <li>Priorités et dates limites</li>
+                <li>Interface utilisateur responsive</li>
+                <li>Stockage local des données</li>
+              </ul>
+            </div>
+            <div class="project-card__tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Git</span>
+            </div>
+            <a class="btn btn--primary project-card__btn" href="https://github.com/thomas-merlen/projet-gestionnaire-tache" target="_blank" rel="noopener"><i class="ri-github-fill"></i> Voir sur GitHub</a>
+          </div>
+        </article>
+
+        <!-- Projet 2: Red Team CSAW -->
+        <article class="project-card">
+          <div class="project-card__left">
+            <a href="csaw2025.png" class="project-image-link">
+              <img src="csaw2025.png" alt="Red Team CSAW 2025" class="project-image">
+            </a>
+          </div>
+          <div class="project-card__right">
+            <div class="project-card__header">
+              <h2 class="project-card__title"><i class="ri-shield-keyhole-line"></i> Red Team CSAW 2025</h2>
+              <p class="project-card__subtitle">Compétition de Cybersécurité</p>
+            </div>
+            <p class="project-card__description">
+              Participation à l'épreuve « Red Team Competition » dédiée aux lycéen(ne)s, organisée en collaboration avec <a href="https://thomas-merlen.github.io/" class="project-link" target="_blank">Thomas MERLEN</a> et <a href="https://matthieu-merlen.github.io/" class="project-link" target="_blank">Matthieu MERLEN</a>. Cette compétition vise à sensibiliser les jeunes aux métiers de la sécurité informatique et à susciter des vocations.
+            </p>
+            <div class="project-card__features">
+              <h3 class="project-card__features-title">Objectifs et défis :</h3>
+              <ul class="project-card__list">
+                <li>Qualifications en ligne du 1er au 29 octobre 2025</li>
+                <li>Challenges de difficulté croissante</li>
+                <li>Techniques d'investigation numérique</li>
+                <li>Finale à Grenoble INP - Esisar (14 novembre 2025)</li>
+                <li>Rencontre avec des experts en cybersécurité</li>
+              </ul>
+            </div>
+            <div class="project-card__tech">
+              <span class="tech-tag">Cybersécurité</span>
+              <span class="tech-tag">Forensics</span>
+              <span class="tech-tag">Red Team</span>
+            </div>
+            <a class="btn btn--primary project-card__btn" href="https://esisar.grenoble-inp.fr/fr/recherche/csaw" target="_blank"><i class="ri-shield-line"></i> Voir Détails</a>
+          </div>
+        </article>
+
+        <!-- Projet 3: Infrastructure -->
+        <article class="project-card">
+          <div class="project-card__left">
+            <a href="CTF CNAM.png" class="project-image-link">
+              <img src="CTF CNAM.png" alt="Infrastructure IT" class="project-image">
+            </a>
+          </div>
+          <div class="project-card__right">
+            <div class="project-card__header">
+              <h2 class="project-card__title"><i class="ri-terminal-box-line"></i> Capture The Flag - CNAM</h2>
+              <p class="project-card__subtitle">Gestion Système et Sécurité</p>
+            </div>
+            <p class="project-card__description">
+              Projet d'administration système explorant les aspects critiques de la gestion d'infrastructure informatique, avec un focus particulier sur la sécurité, la virtualisation et la gestion des utilisateurs.
+            </p>
+            <div class="project-card__features">
+              <h3 class="project-card__features-title">Domaines couverts :</h3>
+              <ul class="project-card__list">
+                <li>Gestion des services système</li>
+                <li>Administration des utilisateurs et permissions</li>
+                <li>Implémentation de politiques de sécurité</li>
+                <li>Virtualisation (VMware/Oracle)</li>
+                <li>Monitoring et optimisation performances</li>
+              </ul>
+            </div>
+            <div class="project-card__tech">
+              <span class="tech-tag">VMware</span>
+              <span class="tech-tag">Oracle</span>
+              <span class="tech-tag">Linux/Windows</span>
+              <span class="tech-tag">Sécurité</span>
+            </div>
+            <a class="btn btn--primary project-card__btn" href="projet3.html"><i class="ri-folder-open-line"></i> Voir Détails</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+      <header class="section__header">
+        <h3 class="section__title"><i class="ri-award-line"></i> Certifications</h3>
+      </header>
+
+      <div class="certifications-wrapper">
+        <div class="certifications-mosaic">
+          <!-- Cert 1 -->
+          <article class="cert-card-mosaic">
+            <div class="cert-card-mosaic__image">
+              <img src="cert1.png" alt="Packet Tracer" class="cert-image">
+              <div class="cert-card-mosaic__overlay">
+                <div class="cert-card-mosaic__overlay-badge"><i class="ri-award-fill"></i></div>
+                <div class="cert-card-mosaic__overlay-name">Introduction to Packet Tracer</div>
+                <div class="cert-card-mosaic__overlay-issuer">CISCO</div>
+                <p class="cert-card-mosaic__overlay-desc">Certification CISCO sur l'utilisation de Packet Tracer. Maîtrise des simulations réseau et création de topologies complexes.</p>
+                <div class="cert-card-mosaic__overlay-skills">
+                  <span class="cert-skill">Simulation</span>
+                  <span class="cert-skill">Réseau</span>
+                </div>
+                <a href="cert1.png" class="cert-overlay-link">Voir Certificat →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 2 -->
+          <article class="cert-card-mosaic">
+            <div class="cert-card-mosaic__image">
+              <img src="cert.2.jpg" alt="Networking Basics" class="cert-image">
+              <div class="cert-card-mosaic__overlay">
+                <div class="cert-card-mosaic__overlay-badge"><i class="ri-award-fill"></i></div>
+                <div class="cert-card-mosaic__overlay-name">Networking Basics</div>
+                <div class="cert-card-mosaic__overlay-issuer">CISCO</div>
+                <p class="cert-card-mosaic__overlay-desc">Principes fondamentaux de la communication réseau. Comprend les concepts de protocoles, adressage IP et architecture des réseaux.</p>
+                <div class="cert-card-mosaic__overlay-skills">
+                  <span class="cert-skill">Réseau</span>
+                  <span class="cert-skill">Protocoles</span>
+                </div>
+                <a href="cert.2.jpg" class="cert-overlay-link">Voir Certificat →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 3 -->
+          <article class="cert-card-mosaic">
+            <div class="cert-card-mosaic__image">
+              <div class="cert-placeholder">
+                <i class="ri-award-line"></i>
+              </div>
+              <div class="cert-card-mosaic__overlay">
+                <div class="cert-card-mosaic__overlay-badge"><i class="ri-award-fill"></i></div>
+                <div class="cert-card-mosaic__overlay-name">RGPD Basics</div>
+                <div class="cert-card-mosaic__overlay-issuer">Protection des données</div>
+                <p class="cert-card-mosaic__overlay-desc">Principes du RGPD et conformité. Formation sur la protection des données personnelles.</p>
+                <div class="cert-card-mosaic__overlay-skills">
+                  <span class="cert-skill">RGPD</span>
+                  <span class="cert-skill">Conformité</span>
+                </div>
+                <a href="cert3.html" class="cert-overlay-link">Voir Certificat →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formation -->
+    <section id="formation" class="section">
+      <header class="section__header">
+        <h3 class="section__title"><i class="ri-graduation-cap-line"></i> Formation</h3>
+      </header>
+
+      <div class="timeline-wrapper">
+        <!-- Ligne verticale centrale -->
+        <div class="timeline-line"></div>
+
+        <!-- Timeline items -->
+        <div class="timeline-items">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-content timeline-content-left">
+              <h3 class="timeline-title">Lycée Gustave Eiffel</h3>
+              <p class="timeline-subtitle">Bac STMG option RH</p>
+              <p class="timeline-date"><small>2023 – 2025</small></p>
+              <a href="https://lyc-eiffel-rueil.ac-versailles.fr/" target="_blank" rel="noopener" class="timeline-link">Voir établissement →</a>
+            </div>
+            <div class="timeline-node"></div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-empty"></div>
+            <div class="timeline-node"></div>
+            <div class="timeline-content timeline-content-right">
+              <h3 class="timeline-title">Lycée Turgot - Paris</h3>
+              <p class="timeline-subtitle">BTS SIO</p>
+              <p class="timeline-date"><small>2025 – 2027</small></p>
+              <a href="https://lyc-turgot.ac-paris.fr" target="_blank" rel="noopener" class="timeline-link">Voir établissement →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p class="footer__text">© 2025 Fellah Zakariya – Portfolio</p>
+  </footer>
+
+  <!-- Modal Contact -->
+  <div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+      <button id="closeModal" class="close-modal">✕</button>
+      
+      <h2 class="modal-title">Contact</h2>
+      <form class="contact-form">
+        <label class="form-label">
+          <span class="form-label-text">Nom</span>
+          <input type="text" placeholder="Votre nom" class="form-input" />
+        </label>
+        
+        <label class="form-label">
+          <span class="form-label-text">Email</span>
+          <input type="email" placeholder="Votre email" class="form-input" />
+        </label>
+        
+        <label class="form-label">
+          <span class="form-label-text">Message</span>
+          <textarea placeholder="Votre message" rows="5" class="form-textarea"></textarea>
+        </label>
+        
+        <button type="submit" class="form-submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Effet de frappe
+    const text = "Étudiant SIO – Passionné de cybersécurité, IA et informatique.";
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        document.getElementById("typing").textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 35);
+      }
+    }
+
+    typing();
+
+    // Fonction pour scroll to top et refresh avec fade
+    function refreshWithFade() {
+      document.body.classList.add('fade-out');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    }
+
+    // Fonction pour navigation avec fade
+    function navigateWithFade(href) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    }
+
+    // Fonction pour navigation avec fade courte
+    function navigateWithFadeShort(href) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250);
+    }
+
+    // Carrousel pour les projets
+    function changeSlide(button, direction) {
+      const slider = button.closest('.project-slider');
+      const slides = slider.querySelector('.slides');
+      const counter = slider.querySelector('.slide-counter');
+      const slideCount = slides.children.length;
+
+      // Calculer la position actuelle
+      const currentTransform = window.getComputedStyle(slides).transform;
+      const matrix = currentTransform.match(/matrix.*\((.+)\)/)[1].split(', ');
+      const currentX = parseInt(matrix[4]);
+      const slideWidth = slides.offsetWidth / slideCount;
+
+      let currentIndex = Math.round(-currentX / (slides.offsetWidth / slideCount));
+      currentIndex += direction;
+
+      // Boucle infinie
+      if (currentIndex >= slideCount) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = slideCount - 1;
+
+      slides.style.transform = `translateX(${-currentIndex * (slides.offsetWidth / slideCount)}px)`;
+      counter.textContent = `${currentIndex + 1}/${slideCount}`;
+    }
+  </script>
 </body>
 </html>

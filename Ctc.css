@@ -1,130 +1,165 @@
+input[type="radio"] {
+  accent-color: var(--neon);
+  margin-right: 7px;
+  vertical-align: middle;
+}
+input[type="radio"]:checked {
+  accent-color: #888888;
+}
+/* ===== Thème ===== */
+:root {
+  --neon: #00fdc6;
+  --bg: #161616;
+  --panel-bg: rgba(0, 253, 198, 0.05);
+  --text: #c0ffef;
+  --white: #ffffff;
+  --shadow: 0 0 35px rgba(0,253,198,0.5);
+}
+
 /* ===== Global ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   font-family: 'Source Code Pro', monospace, Arial, sans-serif;
-  background-color: #161616;
-  color: #00fdc6;
+  background-color: var(--bg);
+  color: var(--neon);
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
+  overflow-x: hidden;
+}
+body.fade-out { opacity: 0; transition: opacity 0.5s ease; }
+
+/* ===== Canvas fond ===== */
+#bgCanvas {
+  position: fixed; top:0; left:0; z-index:-1;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
 }
 
-
-body {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.fade-out {
-  opacity: 0;
-}
-
-/* ===== Retour ===== */
+/* ===== Header retour ===== */
+.contact-header { padding: 24px 0 0 0; }
 #return {
-  border: 2px solid #00fdc6;
-  color: #00fdc6;
+  border: 2px solid var(--neon);
+  color: var(--neon);
   font-weight: 900;
-  padding: 5px 15px;
+  padding: 6px 18px;
   border-radius: 20px;
   display: inline-block;
-  margin-top: 30px;
   transition: 0.3s;
-  text-decoration-line: none;
+  text-decoration: none;
 }
-
 #return:hover {
-  background-color: #00fdc6;
+  background-color: var(--neon);
   color: black;
-  box-shadow: 0 0 20px #00fdc6;
+  box-shadow: 0 0 25px rgba(0,253,198,0.6);
 }
 
-/* ===== Formulaire ===== */
+/* ===== Form ===== */
 .Form {
   margin: 40px auto;
-  padding: 20px;
+  padding: 25px;
   width: 90%;
-  max-width: 500px;
-  border: 2px solid #00fdc6;
-  border-radius: 10px;
-  box-shadow: 0 0 30px #00fdc6;
-  background-color: rgba(0, 253, 198, 0.05);
-  color: #00fdc6;
+  max-width: 600px;
+  border: 2px solid var(--neon);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  background-color: var(--panel-bg);
+  color: var(--neon);
 }
-
-/* Titres */
 .Form h2 {
-  color: white;
+  color: var(--white);
   margin-bottom: 20px;
-  text-shadow: 0 0 10px #00fdc6;
+  text-shadow: 0 0 10px var(--neon);
+  font-size: 1.6em;
 }
 
-/* Fieldsets */
+/* ===== Champs ===== */
 fieldset {
-  border: 1px solid white;
-  border-radius: 8px;
+  border: 1px solid var(--neon);
+  border-radius: 10px;
   padding: 15px;
   margin-bottom: 20px;
+  background-color: rgba(0,253,198,0.02);
+  text-align: left;
 }
-
-/* Legends */
 legend {
-  color: #00fdc6;
+  color: var(--neon);
   font-weight: bold;
+  text-shadow: 0 0 5px var(--neon);
 }
+.inline {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+.block { display: flex; flex-direction: column; gap: 6px; text-align: left; margin-bottom: 14px; }
+.block span { color: var(--white); }
+small { font-size: 0.8em; color: var(--neon); }
 
-/* Inputs & textarea */
 input[type="text"], input[type="email"], input[type="tel"], textarea {
-  width: 90%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #00fdc6;
-  border-radius: 5px;
-    background-color: #1a1a1a;
-  color: #00fdc6;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--neon);
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: var(--neon);
+  transition: box-shadow 0.3s, border 0.3s;
 }
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+input:focus, textarea:focus {
   outline: none;
-  border: 1px solid white;
-  box-shadow: 0 0 10px #00fdc6;
+  border: 1px solid var(--white);
+  box-shadow: 0 0 15px rgba(0,253,198,0.7);
+}
+input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
 }
 
-/* Bouton submit */
+/* ===== Checkbox ===== */
+input[type="checkbox"].checker {
+  accent-color: var(--neon);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"].checker:checked {
+  accent-color: #888888;
+}
+.agree {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
+}
+
+/* ===== Submit ===== */
 .but input[type="submit"] {
   padding: 10px 25px;
-  border: 2px solid #00fdc6;
+  border: 2px solid var(--neon);
   border-radius: 20px;
   background-color: transparent;
-  color: #00fdc6;
+  color: var(--neon);
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
-
 .but input[type="submit"]:hover {
-  background-color: #00fdc6;
+  background-color: var(--neon);
   color: black;
-  box-shadow: 0 0 20px #00fdc6;
+  box-shadow: 0 0 25px rgba(0,253,198,0.6);
 }
 
-/* Radio buttons */
-input[type="radio"] {
-  margin-right: 5px;
-}
+/* ===== Liens CG ===== */
+.CG { color: var(--neon); }
+.CG:hover { color: var(--white); text-decoration: underline; }
 
-/* Small text */
-small {
-  font-size: 0.8em;
-  color: #00fdc6;
-}
+/* ===== Footer ===== */
+.contact-footer { padding: 20px; }
+.footer__text { color: var(--text); }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media screen and (max-width: 600px) {
-  .Form {
-    width: 95%;
-    padding: 15px;
-  }
-
-  input[type="text"], input[type="email"], input[type="tel"], textarea {
-    width: 95%;
-  }
+  .Form { width: 95%; padding: 20px; }
 }

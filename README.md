@@ -1,18 +1,20 @@
- À propos de moi
 
--> Je suis étudiant en informatique, passionné par les nouvelles technologies, l’apprentissage continu et la découverte de différents domaines du numérique.
-Ce portfolio regroupe mes projets, mes compétences et mon évolution dans mes études.
+Présentation (FR)
+Étudiant en informatique passionné par les nouvelles technologies.  
+J’aime apprendre, expérimenter et développer des projets pour améliorer mes compétences.
 
-About me
+Presentation (EN)
+Computer science student passionate about new technologies.  
+I enjoy learning, experimenting, and creating projects to improve my skills.
 
--> I am a computer science student, passionate about new technologies, continuous learning, and exploring different areas of digital creation.
-This portfolio showcases my projects, skills, and progress throughout my studies.
+---
 
-CONTACT
+🔗 CONTACT
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/zakariya-fellah-846aa6384/)
+<a href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin" />
+</a>
 
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:zakariya.fellah92@gmail.com)
-
-
-
+<a href="mailto:zakariya.fellah92@gmail.com" target="_blank">
+  <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" />
+</a>

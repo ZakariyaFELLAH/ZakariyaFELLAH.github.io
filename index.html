@@ -11,6 +11,7 @@
 
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -194,28 +195,191 @@
             </div>
           </div>
 
-          <!-- AUTRES -->
-          <div class="competence-section">
-            <div class="competence-wrapper">
-              <h3 class="competences-category-title">Autres</h3>
-              <div class="competences-separator"></div>
-              <ul class="competences-list">
-                <li class="competence-item">
-                  <i class="ri-git-branch-line"></i>
-                  <span>Git</span>
-                </li>
-                <li class="competence-item">
-                  <i class="ri-linux-line"></i>
-                  <span>Linux</span>
-                </li>
-                <li class="competence-item">
-                  <i class="ri-router-line"></i>
-                  <span>Simulation avec Packet Tracer</span>
-            </div>
-          </div>
+<!-- AUTRES COMPÉTENCES EN ONGLETS -->
+  <div class="tabs-wrapper">
+    <h3><i class="ri-tools-line"></i> Autres Compétences</h3>
+    
+    <div class="tabs-buttons">
+      <button class="tab-btn active" onclick="switchTab(event, 'systemes')">🖥️ Systèmes</button>
+      <button class="tab-btn" onclick="switchTab(event, 'reseaux')">🌐 Réseaux</button>
+      <button class="tab-btn" onclick="switchTab(event, 'virt')">⚙️ Virtualisation</button>
+      <button class="tab-btn" onclick="switchTab(event, 'bureau')">📊 Bureautique</button>
+      <button class="tab-btn" onclick="switchTab(event, 'securite')">🔒 Sécurité Tools</button>
+      <button class="tab-btn" onclick="switchTab(event, 'autres')">📋 Gestion</button>
+    </div>
+
+    <!-- TAB: SYSTÈMES -->
+    <div id="systemes" class="tab-content active">
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fab fa-linux"></i></div>
+          <h3 class="expand-title">Linux</h3>
         </div>
+        <p class="expand-desc">Administration système, shell scripting, gestion des utilisateurs. Configuration de serveurs en production.</p>
+        <div class="expand-toggle">+</div>
       </div>
-    </section>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fab fa-windows"></i></div>
+          <h3 class="expand-title">Windows</h3>
+        </div>
+        <p class="expand-desc">Administration Windows, Active Directory, GPO. Gestion des permissions et des services.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="ri-git-branch-line"></i></div>
+          <h3 class="expand-title">Git</h3>
+        </div>
+        <p class="expand-desc">Gestion de version, branches et merges. Workflows collaboratifs et GitHub.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+    </div>
+
+    <!-- TAB: RÉSEAUX -->
+    <div id="reseaux" class="tab-content">
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-network-wired"></i></div>
+          <h3 class="expand-title">Réseaux</h3>
+        </div>
+        <p class="expand-desc">Configuration de routeurs et switches, subnetting. Protocoles TCP/IP, VLAN et topologies complexes.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-diagram-project"></i></div>
+          <h3 class="expand-title">Packet Tracer</h3>
+        </div>
+        <p class="expand-desc">Simulation réseau, conception de topologies. Tests de configuration et certification CISCO.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+    </div>
+
+    <!-- TAB: VIRTUALISATION -->
+    <div id="virt" class="tab-content">
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-server"></i></div>
+          <h3 class="expand-title">VirtualBox</h3>
+        </div>
+        <p class="expand-desc">Création et gestion de VMs, snapshots. Configuration réseau des machines virtuelles.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-database"></i></div>
+          <h3 class="expand-title">Laragon</h3>
+        </div>
+        <p class="expand-desc">Environnement de développement local. Apache, MySQL et PHP intégrés facilement.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+    </div>
+
+    <!-- TAB: BUREAUTIQUE -->
+    <div id="bureau" class="tab-content">
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-file-excel"></i></div>
+          <h3 class="expand-title">Pack Office</h3>
+        </div>
+        <p class="expand-desc">Word, Excel, PowerPoint, Outlook. Création de documents professionnels et analyses de données.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-sitemap"></i></div>
+          <h3 class="expand-title">FreePlane</h3>
+        </div>
+        <p class="expand-desc">Création de cartes mentales et diagrammes. Structuration de projets et organisation d'idées.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-chart-gantt"></i></div>
+          <h3 class="expand-title">GanttProject</h3>
+        </div>
+        <p class="expand-desc">Planification de projets avec diagrammes de Gantt. Suivi des tâches et jalons.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+    </div>
+
+    <!-- TAB: SÉCURITÉ TOOLS -->
+    <div id="securite" class="tab-content">
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-key"></i></div>
+          <h3 class="expand-title">John the Ripper</h3>
+        </div>
+        <p class="expand-desc">Cracking de mots de passe, tests de force brute. Audit des politiques de mots de passe.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-shield-virus"></i></div>
+          <h3 class="expand-title">Nessus</h3>
+        </div>
+        <p class="expand-desc">Scanner de vulnérabilités professionnel. Audit de sécurité et rapports d'évaluation des risques.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-water"></i></div>
+          <h3 class="expand-title">Hydra</h3>
+        </div>
+        <p class="expand-desc">Tests de force brute pour protocoles multiples. Pénétration éthique de services réseau.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="fas fa-map"></i></div>
+          <h3 class="expand-title">Zenmap</h3>
+        </div>
+        <p class="expand-desc">Interface graphique Nmap, cartographie réseau. Découverte d'hôtes et analyse de l'architecture.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+    </div>
+
+    <!-- TAB: GESTION DE PROJET -->
+    <div id="autres" class="tab-content">
+      <div class="expand-card" onclick="toggleExpand(this)">
+        <div class="expand-header">
+          <div class="expand-icon"><i class="ri-briefcase-line"></i></div>
+          <h3 class="expand-title">Gestion de Projet</h3>
+        </div>
+        <p class="expand-desc">Planification et organisation de projets en équipe. Méthodologies Agile et Waterfall, gestion des ressources et des délais. Coordination d'équipes et assurance de la livraison.</p>
+        <div class="expand-toggle">+</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  function switchTab(event, tabId) {
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(tab => tab.classList.remove('active'));
+
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+
+    event.target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+
+  function toggleExpand(card) {
+    card.classList.toggle('active');
+  }
+</script>
 
     <!-- Projets -->
     <section id="projets" class="section">

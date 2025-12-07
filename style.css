@@ -1,7 +1,7 @@
 /* === TAILLE DU TUXZ ===*/
 .tux{
-width: 55px;
-height: 55px;
+width: 53px;
+height: 53px;
 }
 
 
@@ -2017,3 +2017,4 @@ body.fade-out { opacity: 0; }
 .timeline-link:focus-visible {
   color: var(--white);
 }
+

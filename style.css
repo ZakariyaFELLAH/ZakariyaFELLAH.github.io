@@ -2018,3 +2018,9 @@ body.fade-out { opacity: 0; }
   color: var(--white);
 }
 
+/* ===== AJUSTEMENT CSS LOGO ROOT-ME ===== */
+.social-icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}

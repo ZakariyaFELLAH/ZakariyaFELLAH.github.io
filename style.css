@@ -1,7 +1,7 @@
 /* === TAILLE DU TUXZ ===*/
 .tux{
-width: 53px;
-height: 53px;
+width: 55px;
+height: 55px;
 }
 
 
@@ -1587,17 +1587,32 @@ body.fade-out { opacity: 0; }
   font-size: 0.95em;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-btn i {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-btn:hover {
   background: rgba(0, 253, 198, 0.15);
   box-shadow: 0 0 15px rgba(0, 253, 198, 0.3);
+  transform: translateY(-2px);
 }
 
 .tab-btn.active {
   background: var(--neon);
   color: #000;
   box-shadow: 0 0 25px rgba(0, 253, 198, 0.6);
+}
+
+.tab-btn.active i {
+  color: #000;
 }
 
 /* ===== TAB CONTENT ===== */
@@ -2017,7 +2032,6 @@ body.fade-out { opacity: 0; }
 .timeline-link:focus-visible {
   color: var(--white);
 }
-
 /* ===== AJUSTEMENT CSS LOGO ROOT-ME ===== */
 .social-icon img {
   width: 22px;

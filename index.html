@@ -202,12 +202,12 @@
             <h3><i class="ri-tools-line"></i> Autres Compétences</h3>
             
             <div class="tabs-buttons">
-              <button class="tab-btn active" onclick="switchTab(event, 'systemes')">🖥️ Systèmes</button>
-              <button class="tab-btn" onclick="switchTab(event, 'reseaux')">🌐 Réseaux</button>
-              <button class="tab-btn" onclick="switchTab(event, 'virt')">⚙️ Virtualisation</button>
-              <button class="tab-btn" onclick="switchTab(event, 'bureau')">📊 Bureautique</button>
-              <button class="tab-btn" onclick="switchTab(event, 'securite')">🔐 Sécurité Tools</button>
-              <button class="tab-btn" onclick="switchTab(event, 'autres')">📋 Gestion</button>
+              <button class="tab-btn active" onclick="switchTab(event, 'systemes')"><i class="ri-computer-line"></i> Systèmes</button>
+              <button class="tab-btn" onclick="switchTab(event, 'reseaux')"><i class="ri-router-line"></i> Réseaux</button>
+              <button class="tab-btn" onclick="switchTab(event, 'virt')"><i class="ri-server-line"></i> Virtualisation</button>
+              <button class="tab-btn" onclick="switchTab(event, 'bureau')"><i class="ri-file-text-line"></i> Bureautique</button>
+              <button class="tab-btn" onclick="switchTab(event, 'securite')"><i class="ri-lock-line"></i> Sécurité Tools</button>
+              <button class="tab-btn" onclick="switchTab(event, 'autres')"><i class="ri-briefcase-line"></i> Environnement</button>
             </div>
 
             <!-- TAB: SYSTÈMES -->
@@ -351,14 +351,50 @@
               </div>
             </div>
 
-            <!-- TAB: GESTION DE PROJET -->
+            <!-- TAB: ENVIRONNEMENT JURIDIQUE, ÉCONOMIQUE ET MANAGÉRIAL -->
             <div id="autres" class="tab-content">
               <div class="expand-card" onclick="toggleExpand(this)">
                 <div class="expand-header">
-                  <div class="expand-icon"><i class="ri-briefcase-line"></i></div>
+                  <div class="expand-icon"><i class="ri-briefcase-2-line"></i></div>
                   <h3 class="expand-title">Gestion de Projet</h3>
                 </div>
                 <p class="expand-desc">Planification et organisation de projets en équipe. Méthodologies Agile et Waterfall, gestion des ressources et des délais. Coordination d'équipes et assurance de la livraison.</p>
+                <div class="expand-toggle">+</div>
+              </div>
+
+              <div class="expand-card" onclick="toggleExpand(this)">
+                <div class="expand-header">
+                  <div class="expand-icon"><i class="ri-user-management-line"></i></div>
+                  <h3 class="expand-title">Management</h3>
+                </div>
+                <p class="expand-desc">Analyse des modes de fonctionnement et de pilotage des organisations. Compréhension des enjeux liés à la coordination des équipes, à la prise de décision et à la conduite d'objectifs collectifs. Capacité à évaluer l'impact des choix managériaux sur la performance globale d'une structure.</p>
+                <div class="expand-toggle">+</div>
+              </div>
+
+              <div class="expand-card" onclick="toggleExpand(this)">
+                <div class="expand-header">
+                  <div class="expand-icon"><i class="ri-scales-line"></i></div>
+                  <h3 class="expand-title">Droit</h3>
+                </div>
+                <p class="expand-desc">Maîtrise des notions juridiques essentielles encadrant l'activité des organisations : contrats, responsabilité, relations de travail et protection des données. Aptitude à identifier les règles applicables à une situation donnée et à comprendre les risques juridiques associés.</p>
+                <div class="expand-toggle">+</div>
+              </div>
+
+              <div class="expand-card" onclick="toggleExpand(this)">
+                <div class="expand-header">
+                  <div class="expand-icon"><i class="ri-line-chart-line"></i></div>
+                  <h3 class="expand-title">Économie</h3>
+                </div>
+                <p class="expand-desc">Compréhension des mécanismes économiques qui influencent le fonctionnement des entreprises et des marchés. Analyse des comportements des acteurs économiques, de la concurrence, du financement et de l'intervention de l'État. Capacité à interpréter les facteurs impactant la croissance, les prix et la création de valeur.</p>
+                <div class="expand-toggle">+</div>
+              </div>
+
+              <div class="expand-card" onclick="toggleExpand(this)">
+                <div class="expand-header">
+                  <div class="expand-icon"><i class="ri-dashboard-line"></i></div>
+                  <h3 class="expand-title">Gestion</h3>
+                </div>
+                <p class="expand-desc">Compétences en analyse de données, suivi d'activité et appui à la prise de décision. Maîtrise des bases de la gestion comptable, financière et opérationnelle : indicateurs, coûts, performance et allocation des ressources. Aptitude à interpréter des tableaux de gestion et à contribuer au pilotage de projets ou de processus internes.</p>
                 <div class="expand-toggle">+</div>
               </div>
             </div>
@@ -431,7 +467,7 @@
         <!-- Projet 2: Red Team CSAW -->
         <article class="project-card">
           <div class="project-card__left">
-            <a href="https://esisar.grenoble-inp.fr/fr/recherche/csaw" class="project-image-link">
+            <a href="https://esisar.grenoble-inp.fr/fr/recherche/csaw" class="project-image-link" target="_blank">
               <img src="img/csaw2025.png" alt="Red Team CSAW 2025" class="project-image">
             </a>
           </div>
@@ -441,10 +477,10 @@
               <p class="project-card__subtitle">Compétition de Cybersécurité</p>
             </div>
             <p class="project-card__description">
-              Participation à l'épreuve « Red Team Competition » dédiée aux lycéen(ne)s, organisée en collaboration avec <a href="https://thomas-merlen.github.io/" class="project-link" target="_blank">Thomas MERLEN</a> et <a href="https://matthieu-merlen.github.io/" class="project-link" target="_blank">Matthieu MERLEN</a>. Cette compétition vise à sensibiliser les jeunes aux métiers de la sécurité informatique et à susciter des vocations.
+              Participation à l'épreuve « Red Team Competition » avec <a href="https://thomas-merlen.github.io/" class="project-link" target="_blank">Thomas MERLEN</a> et <a href="https://matthieu-merlen.github.io/" class="project-link" target="_blank">Matthieu MERLEN</a>. Cette compétition vise à sensibiliser les jeunes aux métiers de la sécurité informatique et à susciter des vocations.
             </p>
             <div class="project-card__features">
-              <h3 class="project-card__features-title">Objectifs et défis :</h3>
+              <h3 class="project-card__description">Nom de l'équipe : Naibed (Zakariya FELLAH, <a href="https://thomas-merlen.github.io/" class="project-link" target="_blank">Thomas MERLEN</a> et <a href="https://matthieu-merlen.github.io/" class="project-link" target="_blank">Matthieu MERLEN</a>)</h3><br><h3 class="timeline-link">Place: 24/140</h3><br><h3 class="timeline-link"><br>Flag found: 33/49</h3>
               <ul class="project-card__list">
                 <li>Qualifications en ligne du 1er au 29 octobre 2025</li>
                 <li>Challenges de difficulté croissante</li>
@@ -454,9 +490,14 @@
               </ul>
             </div>
             <div class="project-card__tech">
-              <span class="tech-tag">Cybersécurité</span>
-              <span class="tech-tag">Forensics</span>
-              <span class="tech-tag">Red Team</span>
+              <span class="tech-tag">Système (Linux)</span>
+              <span class="tech-tag">Cryptographie</span>
+              <span class="tech-tag">Mathématique</span>
+              <span class="tech-tag">Programmation</span>
+              <span class="tech-tag">OSINT</span>
+              <span class="tech-tag">Réseaux</span>
+              <span class="tech-tag">Stéganographie</span>
+
             </div>
             <a class="btn btn--primary project-card__btn" href="https://drive.google.com/drive/folders/1Zl6ZXZbFoD3bO0XU2QCSbkTmH62_yPT2?usp=sharing" target="_blank"><i class="ri-shield-line"></i> Voir Détails</a>
           </div>
@@ -465,7 +506,7 @@
         <!-- Projet 3: Infrastructure -->
         <article class="project-card">
           <div class="project-card__left">
-            <a href="img/CTF CNAM.png" class="project-image-link">
+            <a href="img/CTF CNAM.png" class="project-image-link" target="_blank">
               <img src="img/CTF CNAM.png" alt="Infrastructure IT" class="project-image">
             </a>
           </div>
@@ -475,25 +516,28 @@
               <p class="project-card__subtitle">Gestion Système et Sécurité</p>
             </div>
             <p class="project-card__description">
-              Projet d'administration système explorant les aspects critiques de la gestion d'infrastructure informatique, avec un focus particulier sur la sécurité, la virtualisation et la gestion des utilisateurs.
-            </p>
+             Projet pratique centré sur la cybersécurité et l’audit technique des infrastructures, réalisé lors d’un Capture The Flag organisé par le CNAM et le lycée Le Rebours, réunissant des étudiants en Licence Informatique et en BTS SIO SISR.
+L’objectif était d’appliquer des méthodes professionnelles d’analyse de vulnérabilités, d’exploitation contrôlée et de récupération d’informations sensibles dans un environnement sécurisé.</p>
             <div class="project-card__features">
               <h3 class="project-card__features-title">Domaines couverts :</h3>
               <ul class="project-card__list">
-                <li>Gestion des services système</li>
-                <li>Administration des utilisateurs et permissions</li>
-                <li>Implémentation de politiques de sécurité</li>
-                <li>Virtualisation (VMware/Oracle)</li>
-                <li>Monitoring et optimisation performances</li>
+                <li>Analyse de vulnérabilités</li>
+                <li>Cartographie réseau et reconnaissance</li>
+                <li>Brute-force et cracking de mots de passe</li>
+                <li>Exploitation de services vulnérables par ligne de commande (CLI)</li>
+                <li>Intrusion et extraction de fichiers sur des serveurs FTP mal configurés</li>
               </ul>
             </div>
             <div class="project-card__tech">
-              <span class="tech-tag">VMware</span>
+              <span class="tech-tag">VirtualBox</span>
               <span class="tech-tag">Oracle</span>
-              <span class="tech-tag">Linux/Windows</span>
-              <span class="tech-tag">Sécurité</span>
+              <span class="tech-tag">KALI Linux</span>
+              <span class="tech-tag">Intrusion</span>
+               <span class="tech-tag">Analyse de vulnérabilités (Nessus)</span>
+               <span class="tech-tag">Scan de Ports</span>
+
             </div>
-            <a class="btn btn--primary project-card__btn" href="projet3.html"><i class="ri-folder-open-line"></i> Voir Détails</a>
+            <a class="btn btn--primary project-card__btn" href="#" target="_blank"><i class="ri-folder-open-line"></i> Voir Détails</a>
           </div>
         </article>
       </div>
@@ -544,11 +588,10 @@
           </article>
 
           <!-- Cert 3 -->
+          <!-- Cert 3 - RGPD CORRIGÉ -->
           <article class="cert-card-mosaic">
             <div class="cert-card-mosaic__image">
-              <div class="cert-placeholder">
-                <i class="ri-award-line"></i>
-              </div>
+              <img src="img/rgpd.jpg" alt="RGPD - CNIL" class="cert-image" >
               <div class="cert-card-mosaic__overlay">
                 <div class="cert-card-mosaic__overlay-badge"><i class="ri-award-fill"></i></div>
                 <div class="cert-card-mosaic__overlay-name">RGPD Basics</div>
@@ -558,7 +601,7 @@
                   <span class="cert-skill">RGPD</span>
                   <span class="cert-skill">Conformité</span>
                 </div>
-                <a href="cert3.html" class="cert-overlay-link">Voir Certificat →</a>
+                <a href="https://drive.google.com/drive/folders/1ld6pUyFEipYOoZxO-SRigTrIv8-h5F3k?usp=sharing" class="cert-overlay-link" target="_blank">Voir Certificat →</a>
               </div>
             </div>
           </article>
@@ -575,7 +618,8 @@
       <div class="veille-card-b">
         <h3>L'évolution des ransomwares et leurs modes de propagation</h3>
         <p>Veille complète sur la menace ransomware actuelle, ses vecteurs d'attaque et les stratégies de défense.</p>
-        <p class="veille-question">❓ Comment les ransomwares ciblent-ils les entreprises et comment s'en protéger ?</p>
+        <p class="veille-question">Comment les ransomwares ciblent-ils les entreprises et comment s'en protéger ?</p>
+        <a href="https://itsocial.fr/cybersecurite/cybersecurite-actualites/ransomware-3-0-anatomie-dune-attaque-automatisees-menee-de-bout-en-bout-par-lia/" class="project-link" target="_blank"><i><b>→ </b>"Ransomware 3.0 : anatomie d’une attaque menée de bout en bout par l’IA"</i></a><br><br>
         <a href="img/Veille.mm" download class="veille-link">
           <i class="ri-download-cloud-line"></i> Télécharger Veille
         </a>

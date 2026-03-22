@@ -1,7 +1,7 @@
 input[type="radio"] {
   accent-color: var(--neon);
   margin-right: 7px;
-  vertical-align: middle;
+  vertical-align: middle; 
 }
 input[type="radio"]:checked {
   accent-color: #888888;

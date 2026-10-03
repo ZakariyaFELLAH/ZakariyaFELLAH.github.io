@@ -139,6 +139,24 @@ h3 { font-size: 1.05em; font-weight: 700; margin: 0 0 10px; }
 .project .more { margin-bottom: 22px; }
 .project strong { color: var(--text); }
 
+/* ========== Expérience ========== */
+.xp:hover { transform: none; }
+.xp-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.xp-logo {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--accent-soft); color: var(--accent); font-size: 1.4em;
+}
+.xp-head h3 { margin: 0; }
+.xp-meta { margin: 2px 0 0 !important; font-size: 0.88em !important; }
+.xp-meta span {
+  font-family: var(--mono); font-size: 0.9em;
+  background: #f1f5f9; padding: 2px 8px; border-radius: 6px;
+}
+.xp-list { margin: 0 0 18px; padding-left: 20px; color: var(--muted); font-size: 0.93em; }
+.xp-list li { margin-bottom: 6px; }
+.xp-list li::marker { color: var(--accent); }
+
 /* ========== Certifications ========== */
 .certs { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .cert {

@@ -38,7 +38,7 @@ a:hover { text-decoration: underline; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 600; font-size: 0.95em; }
 .brand:hover { text-decoration: none; }
 .zf {
-  height: 38px;          /* plus grand et lisible */
+  height: 55px;          /* plus grand et lisible */
   width: auto;           /* la largeur suit les proportions de l'image */
   object-fit: contain;   /* jamais déformé */
   display: block;

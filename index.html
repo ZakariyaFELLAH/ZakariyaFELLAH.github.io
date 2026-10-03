@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Zakariya Fellah</title>
+  <title>Portfolio – Fellah Zakariya</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -54,9 +54,8 @@
           <ul class="bullets">
             <li>Déploiement de bout en bout d'une application web, du code à l'infrastructure AWS</li>
             <li>Conteneurisation Docker / Docker Compose, CI GitHub Actions (pytest, build) et CD via Coolify</li>
-            <li>Infrastructure AWS : EC2, RDS MariaDB, S3, VPC, Security Groups, CloudWatch, SNS</li>
+            <li>Infrastructure AWS : EC2, RDS MariaDB, S3, VPC, Security Groups</li>
             <li>Résolution d'incidents (saturation disque, configuration frontend) et documentation d'architecture</li>
-            <li>Développement d'une API en Python avec le framework FastAPI & d'une Base de données MariaDB</li>
           </ul>
           <div class="tags"><span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Coolify</span><span>Linux</span></div>
         </div>
@@ -68,9 +67,9 @@
       <h2>Projets</h2>
       <div class="grid projects-wide">
         <article class="card project">
-          <img src="img/Architecture AWS - Statique .drawio.png" alt="Infrastructure AWS" class="project-media">
+          <div class="project-media placeholder"><i class="ri-cloud-line"></i></div>
           <h3>Infrastructure AWS pour une application conteneurisée</h3>
-        <p>Conception et déploiement d'une infrastructure cloud sur AWS pour héberger une application web, avec une chaîne CI/CD automatisée. Projet principal de mon stage chez Consultas Group.</p>
+          <p>Conception et déploiement d'une infrastructure cloud sur AWS pour héberger une application web, avec une chaîne CI/CD automatisée. Projet principal de mon stage chez Consultas Group.</p>
         <ul class="bullets">
           <li><strong>IAM</strong> : gestion des identités et des droits d'accès aux ressources selon le principe du moindre privilège</li>
           <li><strong>VPC &amp; Security Groups</strong> : réseau isolé, seuls les ports nécessaires sont exposés, base de données inaccessible depuis Internet</li>
@@ -82,6 +81,7 @@
         </ul>
           <div class="tags"><span>AWS</span><span>IAM</span><span>VPC</span><span>EC2</span><span>RDS</span><span>S3</span><span>Docker</span><span>GitHub Actions</span><span>CloudWatch</span><span>SNS</span></div>
         </article>
+
         <article class="card project">
           <img src="img/IPW.jpg" alt="Infrastructure Proxmox" class="project-media">
           <h3>Infrastructure virtualisée Proxmox</h3>
@@ -145,14 +145,148 @@
     <!-- Compétences -->
     <section id="competences">
       <h2>Compétences</h2>
-      <dl class="skills">
-        <dt>Systèmes</dt><dd>Linux (Debian, Ubuntu), Windows Server, Active Directory, Bash, Git</dd>
-        <dt>Réseaux</dt><dd>TCP/IP, VLAN, subnetting, Packet Tracer</dd>
-        <dt>Cloud &amp; virtualisation</dt><dd>AWS (EC2, RDS, S3), Docker, Proxmox, VirtualBox</dd>
-        <dt>Sécurité</dt><dd>Nmap, Nessus, Hydra, John the Ripper, Kali Linux</dd>
-        <dt>Développement</dt><dd>Python, HTML / CSS, JavaScript, PHP, MySQL</dd>
-        <dt>Outils</dt><dd>GLPI, OCS Inventory, Pack Office, GanttProject</dd>
-      </dl>
+      <div class="skills">
+        <div class="skills-nav" role="tablist" aria-label="Domaines de compétences" aria-orientation="vertical">
+          <button class="skills-tab active" role="tab" aria-selected="true" aria-controls="sk-reseaux" data-tab="sk-reseaux"><i class="ri-router-line"></i><span>Réseaux</span><span class="count">6</span></button>
+          <button class="skills-tab" role="tab" aria-selected="false" aria-controls="sk-systemes" data-tab="sk-systemes"><i class="ri-server-line"></i><span>Systèmes</span><span class="count">4</span></button>
+          <button class="skills-tab" role="tab" aria-selected="false" aria-controls="sk-cloud" data-tab="sk-cloud"><i class="ri-cloud-line"></i><span>Cloud &amp; DevOps</span><span class="count">5</span></button>
+          <button class="skills-tab" role="tab" aria-selected="false" aria-controls="sk-cyber" data-tab="sk-cyber"><i class="ri-shield-line"></i><span>Cybersécurité</span><span class="count">4</span></button>
+          <button class="skills-tab" role="tab" aria-selected="false" aria-controls="sk-dev" data-tab="sk-dev"><i class="ri-code-s-slash-line"></i><span>Scripting &amp; données</span><span class="count">3</span></button>
+          <button class="skills-tab" role="tab" aria-selected="false" aria-controls="sk-methodes" data-tab="sk-methodes"><i class="ri-briefcase-line"></i><span>Méthodes &amp; outils</span><span class="count">3</span></button>
+        </div>
+        <div class="skills-content">
+          <div class="skills-panel active" id="sk-reseaux" role="tabpanel">
+            <header class="skills-panel-head"><span class="skills-panel-icon"><i class="ri-router-line"></i></span><div><h3>Réseaux</h3><p>Conception, configuration et analyse de réseaux locaux, du plan d&#x27;adressage au filtrage des flux.</p></div></header>
+            <ul class="skills-list">
+              <li class="skill-row">
+                <div class="skill-main"><h4>Adressage IP &amp; sous-réseaux</h4><p>Conception de plans d&#x27;adressage et découpage optimisé des sous-réseaux.</p><div class="skill-tools"><span>IPv4</span><span>Subnetting</span><span>VLSM</span><span>Modèle OSI / TCP-IP</span></div></div>
+                <div class="skill-ctx">BTS SIO · Cisco</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Commutation</h4><p>Segmentation du réseau local et prévention des boucles de niveau 2.</p><div class="skill-tools"><span>VLAN</span><span>STP</span><span>Switchs</span></div></div>
+                <div class="skill-ctx">BTS SIO · Packet Tracer</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Routage</h4><p>Configuration de routeurs et interconnexion de réseaux.</p><div class="skill-tools"><span>Configuration routeur</span><span>Packet Tracer</span></div></div>
+                <div class="skill-ctx">BTS SIO · Cisco</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Services réseau</h4><p>Attribution automatique des adresses IP sur un réseau local.</p><div class="skill-tools"><span>DHCP</span></div></div>
+                <div class="skill-ctx">BTS SIO</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Pare-feu &amp; filtrage</h4><p>Définition de règles de filtrage et exposition minimale des services.</p><div class="skill-tools"><span>pfSense</span><span>VPC</span><span>Security Groups</span></div></div>
+                <div class="skill-ctx">BTS SIO · Stage</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Analyse de trafic</h4><p>Capture et inspection de paquets pour diagnostiquer un problème réseau.</p><div class="skill-tools"><span>Wireshark</span></div></div>
+                <div class="skill-ctx">BTS SIO · CTF</div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-panel" id="sk-systemes" role="tabpanel">
+            <header class="skills-panel-head"><span class="skills-panel-icon"><i class="ri-server-line"></i></span><div><h3>Systèmes</h3><p>Administration de serveurs Linux et Windows en environnement virtualisé.</p></div></header>
+            <ul class="skills-list">
+              <li class="skill-row">
+                <div class="skill-main"><h4>Administration Linux</h4><p>Installation, configuration et maintenance de serveurs : services, utilisateurs, droits, incidents.</p><div class="skill-tools"><span>Debian</span><span>Ubuntu</span><span>Bash</span></div></div>
+                <div class="skill-ctx">Stage · Homelab</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Administration Windows Server</h4><p>Déploiement d&#x27;un domaine et gestion des comptes, groupes et unités d&#x27;organisation.</p><div class="skill-tools"><span>Windows Server 2025</span><span>Active Directory</span><span>PowerShell</span></div></div>
+                <div class="skill-ctx">Projet Proxmox</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Virtualisation</h4><p>Mise en place d&#x27;un hyperviseur et gestion du cycle de vie des machines virtuelles.</p><div class="skill-tools"><span>Proxmox VE</span><span>VirtualBox</span></div></div>
+                <div class="skill-ctx">Projet Proxmox · Homelab</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Services &amp; gestion de parc</h4><p>Déploiement d&#x27;outils de gestion de parc, d&#x27;inventaire et de services web.</p><div class="skill-tools"><span>GLPI</span><span>OCS Inventory</span><span>LAMP</span></div></div>
+                <div class="skill-ctx">Projet Proxmox · Procédures</div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-panel" id="sk-cloud" role="tabpanel">
+            <header class="skills-panel-head"><span class="skills-panel-icon"><i class="ri-cloud-line"></i></span><div><h3>Cloud &amp; DevOps</h3><p>Déploiement et automatisation d&#x27;infrastructures cloud, de l&#x27;hébergement à la supervision.</p></div></header>
+            <ul class="skills-list">
+              <li class="skill-row">
+                <div class="skill-main"><h4>Infrastructure AWS</h4><p>Conception et déploiement d&#x27;une infrastructure hébergeant une application en production.</p><div class="skill-tools"><span>EC2</span><span>Elastic IP</span><span>VPC</span><span>RDS</span><span>S3</span></div></div>
+                <div class="skill-ctx">Stage Consultas Group</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Sécurité &amp; supervision AWS</h4><p>Gestion des droits d&#x27;accès, suivi des métriques et alertes automatiques.</p><div class="skill-tools"><span>IAM</span><span>CloudWatch</span><span>SNS</span></div></div>
+                <div class="skill-ctx">Stage Consultas Group</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Conteneurisation</h4><p>Conteneurisation d&#x27;applications multi-services, gestion des images et des volumes.</p><div class="skill-tools"><span>Docker</span><span>Docker Compose</span></div></div>
+                <div class="skill-ctx">Stage · Projet Proxmox</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Intégration &amp; déploiement continus</h4><p>Chaîne automatisée : tests, construction de l&#x27;image puis déploiement.</p><div class="skill-tools"><span>GitHub Actions</span><span>Coolify</span><span>Git</span></div></div>
+                <div class="skill-ctx">Stage Consultas Group</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Automatisation de configuration</h4><p>Bases de l&#x27;automatisation : inventaire, playbooks, clés SSH.</p><div class="skill-tools"><span>Ansible</span></div></div>
+                <div class="skill-ctx">Autoformation</div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-panel" id="sk-cyber" role="tabpanel">
+            <header class="skills-panel-head"><span class="skills-panel-icon"><i class="ri-shield-line"></i></span><div><h3>Cybersécurité</h3><p>Audit, tests d&#x27;intrusion en environnement contrôlé et protection des données.</p></div></header>
+            <ul class="skills-list">
+              <li class="skill-row">
+                <div class="skill-main"><h4>Reconnaissance &amp; audit</h4><p>Cartographie d&#x27;un réseau, scan de ports et analyse de vulnérabilités.</p><div class="skill-tools"><span>Nmap</span><span>Zenmap</span><span>Nessus</span></div></div>
+                <div class="skill-ctx">CTF CNAM · CSAW 2025</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Tests d&#x27;intrusion</h4><p>Exploitation de services mal configurés et attaques de mots de passe.</p><div class="skill-tools"><span>Kali Linux</span><span>Hydra</span><span>John the Ripper</span></div></div>
+                <div class="skill-ctx">CTF CNAM</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Challenges CTF</h4><p>Résolution d&#x27;épreuves en équipe et en temps limité.</p><div class="skill-tools"><span>Cryptographie</span><span>OSINT</span><span>Stéganographie</span><span>Rétro-ingénierie</span></div></div>
+                <div class="skill-ctx">CSAW 2025 · PTH 2026</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Protection des données</h4><p>Principes du RGPD et chiffrement des données sensibles.</p><div class="skill-tools"><span>RGPD</span><span>VeraCrypt</span></div></div>
+                <div class="skill-ctx">Atelier RGPD (CNIL)</div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-panel" id="sk-dev" role="tabpanel">
+            <header class="skills-panel-head"><span class="skills-panel-icon"><i class="ri-code-s-slash-line"></i></span><div><h3>Scripting &amp; données</h3><p>Automatisation des tâches d&#x27;administration et gestion des bases de données.</p></div></header>
+            <ul class="skills-list">
+              <li class="skill-row">
+                <div class="skill-main"><h4>Scripting système</h4><p>Automatisation de tâches d&#x27;administration et scripts de supervision.</p><div class="skill-tools"><span>Bash</span><span>PowerShell</span><span>Python</span></div></div>
+                <div class="skill-ctx">Stage · Projet Proxmox</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Bases de données</h4><p>Requêtes SQL, modélisation et administration de bases relationnelles.</p><div class="skill-tools"><span>MySQL</span><span>MariaDB</span><span>PostgreSQL</span><span>MCD / MLD</span></div></div>
+                <div class="skill-ctx">Stage Consultas Group</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Développement web</h4><p>Intégration de pages web ; notions de JavaScript et de PHP.</p><div class="skill-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div></div>
+                <div class="skill-ctx">Portfolio · Projets</div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-panel" id="sk-methodes" role="tabpanel">
+            <header class="skills-panel-head"><span class="skills-panel-icon"><i class="ri-briefcase-line"></i></span><div><h3>Méthodes &amp; outils</h3><p>Documentation, organisation du travail et environnement de l&#x27;entreprise.</p></div></header>
+            <ul class="skills-list">
+              <li class="skill-row">
+                <div class="skill-main"><h4>Documentation technique</h4><p>Rédaction de procédures, de rapports et de schémas d&#x27;architecture.</p><div class="skill-tools"><span>Draw.io</span><span>Pack Office</span></div></div>
+                <div class="skill-ctx">Stage · Procédures</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Gestion de projet</h4><p>Planification, répartition des tâches et travail en équipe.</p><div class="skill-tools"><span>GanttProject</span><span>FreePlane</span></div></div>
+                <div class="skill-ctx">Projet Proxmox (équipe de 4)</div>
+              </li>
+              <li class="skill-row">
+                <div class="skill-main"><h4>Culture économique &amp; juridique</h4><p>Droit du numérique, économie et management des organisations.</p><div class="skill-tools"><span>Droit</span><span>Économie</span><span>Management</span></div></div>
+                <div class="skill-ctx">BTS SIO (CEJM)</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Certifications -->
@@ -204,8 +338,7 @@
         <div class="row-side">2025 – 2027</div>
         <div class="row-main">
           <h3>BTS SIO option SISR</h3>
-          <p class="meta">Lycée Turgot, Paris 3</p>
-          <a href="https://pia.ac-paris.fr/serail/jcms/s2_455888/fr/bts-sio" target="_blank" rel="noopener" class="more">Voir plus</a>
+          <p class="meta">Lycée Turgot, Paris</p>
         </div>
       </article>
       <article class="row-item">
@@ -213,7 +346,6 @@
         <div class="row-main">
           <h3>Bac STMG option RH</h3>
           <p class="meta">Lycée Gustave Eiffel, Rueil-Malmaison</p>
-          <a href="https://lyc-eiffel-rueil.ac-versailles.fr/spip.php?rubrique35" target="_blank" rel="noopener" class="more">Voir plus</a>
         </div>
       </article>
     </section>
@@ -236,5 +368,18 @@
   </main>
 
   <footer>© 2026 Zakariya Fellah</footer>
+  <script>
+    // Onglets de la section Compétences
+    const skillTabs = document.querySelectorAll('.skills-tab');
+    skillTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        skillTabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.skills-panel').forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

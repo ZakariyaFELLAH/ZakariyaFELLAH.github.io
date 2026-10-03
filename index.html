@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – Fellah Zakariya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="nav">
-    <a href="#top" class="brand"><img src="img/tuxz.png" alt="Accueil" class="tux"></a>
+    <a href="#top" class="brand"><img src="img/tuxz.png" alt="Accueil" class="tux"> Zakariya Fellah</a>
     <nav>
       <a href="#experience">Expérience</a>
-      <a href="#competences">Compétences</a>
       <a href="#projets">Projets</a>
+      <a href="#ctf">CTF</a>
+      <a href="#competences">Compétences</a>
       <a href="#certifications">Certifications</a>
       <a href="#veille">Veille</a>
       <a href="#procedures">Procédures</a>
@@ -30,13 +31,14 @@
     <section class="hero">
       <img src="img/images-2.png" alt="Photo de Zakariya Fellah" class="avatar">
       <div>
-        <h1><span>FELLAH</span> Zakariya</h1>
-        <p class="subtitle">Étudiant BTS SIO SISR – Cybersécurité, cloud et infrastructure</p>
+        <p class="eyebrow">Étudiant BTS SIO SISR</p>
+        <h1>Zakariya Fellah</h1>
+        <p class="subtitle">Infrastructure, cloud et cybersécurité. Je construis, déploie et sécurise des environnements Linux et cloud.</p>
         <div class="links">
-          <a href="https://github.com/ZakariyaFELLAH" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-          <a href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-          <a href="https://www.root-me.org/Ingenuity-exe?lang=fr" target="_blank" rel="noopener" aria-label="Root Me"><img src="img/rootme.png" alt="Root Me"></a>
-          <a href="img/Tableau de synthèse.pdf" target="_blank" class="btn"><i class="ri-file-list-line"></i> Tableau de synthèse</a>
+          <a href="img/Tableau de synthèse.pdf" target="_blank" class="btn">Tableau de synthèse</a>
+          <a href="https://github.com/ZakariyaFELLAH" target="_blank" rel="noopener" aria-label="GitHub" class="icon-link"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com/in/zakariya-fellah-846aa6384/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="https://www.root-me.org/Ingenuity-exe?lang=fr" target="_blank" rel="noopener" aria-label="Root Me" class="icon-link"><span class="rootme-icon"></span></a>
         </div>
       </div>
     </section>
@@ -44,55 +46,20 @@
     <!-- Expérience -->
     <section id="experience">
       <h2>Expérience</h2>
-      <article class="card xp">
-        <div class="xp-head">
-          <div class="xp-logo"><i class="ri-building-2-line"></i></div>
-          <div>
-            <h3>Stagiaire DevOps – Consultas Group</h3>
-            <p class="xp-meta">Nanterre · Stage BTS SIO · <span>2026</span></p>
-          </div>
+      <article class="row-item">
+        <div class="row-side">2026</div>
+        <div class="row-main">
+          <h3>Stagiaire DevOps · Consultas Group</h3>
+          <p class="meta">Nanterre · Stage de 1re année BTS SIO</p>
+          <ul class="bullets">
+            <li>Déploiement de bout en bout d'une application web, du code à l'infrastructure AWS</li>
+            <li>Conteneurisation Docker / Docker Compose, CI GitHub Actions (pytest, build) et CD via Coolify</li>
+            <li>Infrastructure AWS : EC2, RDS MariaDB, S3, VPC, Security Groups</li>
+            <li>Résolution d'incidents (saturation disque, configuration frontend) et documentation d'architecture</li>
+          </ul>
+          <div class="tags"><span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Coolify</span><span>Linux</span></div>
         </div>
-        <p>Conception et déploiement de bout en bout d'une application web (Pokédex), du code jusqu'à l'infrastructure cloud AWS, avec une chaîne CI/CD automatisée.</p>
-        <ul class="xp-list">
-          <li>Backend FastAPI + MariaDB, conteneurisé avec Docker et Docker Compose</li>
-          <li>CI avec GitHub Actions (tests pytest + build Docker) et déploiement continu via Coolify</li>
-          <li>Infrastructure AWS : EC2, RDS MariaDB, S3, VPC et Security Groups</li>
-          <li>Résolution d'incidents en production (saturation disque, configuration frontend)</li>
-          <li>Documentation : schémas d'architecture et de pipeline (Draw.io), rapports hebdomadaires</li>
-        </ul>
-        <div class="tags"><span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Coolify</span><span>FastAPI</span><span>MariaDB</span><span>Linux</span></div>
       </article>
-    </section>
-
-    <!-- Compétences -->
-    <section id="competences">
-      <h2>Compétences</h2>
-      <div class="grid">
-        <div class="card">
-          <h3><i class="ri-computer-line"></i> Systèmes</h3>
-          <div class="tags"><span>Linux (Debian, Ubuntu)</span><span>Windows Server</span><span>Active Directory</span><span>Bash</span><span>Git</span></div>
-        </div>
-        <div class="card">
-          <h3><i class="ri-router-line"></i> Réseaux</h3>
-          <div class="tags"><span>TCP/IP</span><span>VLAN</span><span>Subnetting</span><span>Packet Tracer</span></div>
-        </div>
-        <div class="card">
-          <h3><i class="ri-server-line"></i> Virtualisation</h3>
-          <div class="tags"><span>Proxmox</span><span>VirtualBox</span><span>Docker</span></div>
-        </div>
-        <div class="card">
-          <h3><i class="ri-shield-line"></i> Sécurité</h3>
-          <div class="tags"><span>Nmap</span><span>Nessus</span><span>Hydra</span><span>John the Ripper</span><span>Kali Linux</span></div>
-        </div>
-        <div class="card">
-          <h3><i class="ri-code-s-slash-line"></i> Développement</h3>
-          <div class="tags"><span>HTML / CSS</span><span>JavaScript</span><span>Python</span><span>PHP</span><span>MySQL</span></div>
-        </div>
-        <div class="card">
-          <h3><i class="ri-briefcase-line"></i> Outils</h3>
-          <div class="tags"><span>GLPI</span><span>OCS Inventory</span><span>Pack Office</span><span>GanttProject</span></div>
-        </div>
-      </div>
     </section>
 
     <!-- Projets -->
@@ -100,28 +67,85 @@
       <h2>Projets</h2>
       <div class="grid">
         <article class="card project">
-          <img src="img/GDT- 2025.png" alt="Gestionnaire de tâches">
+          <div class="project-media placeholder"><i class="ri-cloud-line"></i></div>
+          <h3>Pokédex – application cloud</h3>
+          <p>Application web FastAPI + MariaDB conteneurisée et déployée sur AWS avec une chaîne CI/CD complète. Projet principal de mon stage.</p>
+          <div class="tags"><span>FastAPI</span><span>MariaDB</span><span>Docker</span><span>AWS</span><span>CI/CD</span></div>
+        </article>
+
+        <article class="card project">
+          <!-- Remplace ce bloc par <img src="img/infra-proxmox.png" alt="Infrastructure Proxmox" class="project-media"> quand tu as une capture -->
+          <div class="project-media placeholder"><i class="ri-server-line"></i></div>
+          <h3>Infrastructure virtualisée Proxmox</h3>
+          <p>Projet en équipe de 4 : déploiement d'un hyperviseur Proxmox sur serveur physique et d'une infrastructure Windows Server 2025 proche d'un environnement professionnel.</p>
+          <ul class="bullets">
+            <li>Création et gestion des machines virtuelles</li>
+            <li>Active Directory : utilisateurs, groupes et organisation du domaine</li>
+            <li>GLPI pour la gestion de parc et le support</li>
+            <li>Automatisation de tâches en PowerShell, services conteneurisés avec Docker</li>
+          </ul>
+          <div class="tags"><span>Proxmox</span><span>Windows Server 2025</span><span>Active Directory</span><span>GLPI</span><span>PowerShell</span><span>Docker</span></div>
+        </article>
+
+        <article class="card project">
+          <img src="img/GDT- 2025.png" alt="Gestionnaire de tâches" class="project-media">
           <h3>Gestionnaire de tâches</h3>
-          <p>Application web de gestion de tâches (catégories, priorités, échéances, stockage local), réalisée avec Thomas et Matthieu Merlen.</p>
+          <p>Application web de gestion de tâches (catégories, priorités, échéances, stockage local), réalisée en équipe avec Thomas et Matthieu Merlen.</p>
           <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span></div>
-          <a href="https://github.com/thomas-merlen/projet-gestionnaire-tache" target="_blank" rel="noopener" class="more">Voir sur GitHub →</a>
-        </article>
-
-        <article class="card project">
-          <img src="img/csaw2025.png" alt="CSAW 2025">
-          <h3>Red Team CSAW 2025</h3>
-          <p>Compétition de cybersécurité en équipe (Naibed). Qualifications en ligne puis finale à Grenoble INP – Esisar. <strong>24e / 140</strong>, 33 flags sur 49.</p>
-          <div class="tags"><span>Crypto</span><span>OSINT</span><span>Stégano</span><span>Linux</span><span>Réseau</span></div>
-          <a href="https://drive.google.com/drive/folders/1Zl6ZXZbFoD3bO0XU2QCSbkTmH62_yPT2?usp=sharing" target="_blank" rel="noopener" class="more">Voir les détails →</a>
-        </article>
-
-        <article class="card project">
-          <img src="img/CTF CNAM.png" alt="CTF CNAM">
-          <h3>CTF – CNAM</h3>
-          <p>CTF organisé par le CNAM et le lycée Le Rebours : reconnaissance réseau, scan de vulnérabilités, brute-force et exploitation d'un FTP mal configuré.</p>
-          <div class="tags"><span>Kali Linux</span><span>Nessus</span><span>Nmap</span><span>VirtualBox</span></div>
+          <a href="https://github.com/thomas-merlen/projet-gestionnaire-tache" target="_blank" rel="noopener" class="more">Voir sur GitHub</a>
         </article>
       </div>
+    </section>
+
+    <!-- CTF -->
+    <section id="ctf">
+      <h2>Compétitions CTF</h2>
+      <div class="ctf-list">
+        <article class="ctf">
+          <!-- Remplace ce bloc par <img src="img/pth-2026.png" alt="Passe Ton Hack d'abord 2026" class="ctf-media"> quand tu as une capture -->
+          <div class="ctf-media placeholder"><i class="ri-flag-2-line"></i></div>
+          <div class="ctf-body">
+            <span class="badge">141<sup>e</sup> / 822 · 20 flags sur 22</span>
+            <h3>Passe Ton Hack d'abord 2026</h3>
+            <p class="meta">2026 · Équipe [PAR]Naibed</p>
+            <p>CTF national étudiant : 20 flags sur 22 trouvés en 4 heures de recherche.</p>
+          </div>
+        </article>
+
+        <article class="ctf">
+          <img src="img/csaw2025.png" alt="CSAW 2025" class="ctf-media">
+          <div class="ctf-body">
+            <span class="badge">24<sup>e</sup> / 140 · 33 flags sur 49</span>
+            <h3>CSAW 2025 – Red Team Competition</h3>
+            <p class="meta">Grenoble INP – Esisar · Octobre – novembre 2025 · Équipe Naibed</p>
+            <p>Qualifications en ligne puis finale sur place. Épreuves en cryptographie, OSINT, stéganographie, système et réseau.</p>
+            <a href="https://drive.google.com/drive/folders/1Zl6ZXZbFoD3bO0XU2QCSbkTmH62_yPT2?usp=sharing" target="_blank" rel="noopener" class="more">Voir les détails</a>
+          </div>
+        </article>
+
+        <article class="ctf">
+          <img src="img/CTF CNAM.png" alt="CTF CNAM" class="ctf-media">
+          <div class="ctf-body">
+            <span class="badge">Participant</span>
+            <h3>CTF CNAM × Lycée Le Rebours</h3>
+            <p class="meta">CNAM · Étudiants Licence Info et BTS SIO SISR</p>
+            <p>Reconnaissance réseau, scan de vulnérabilités (Nessus, Nmap), brute-force et exploitation d'un serveur FTP mal configuré depuis Kali Linux.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences">
+      <h2>Compétences</h2>
+      <dl class="skills">
+        <dt>Systèmes</dt><dd>Linux (Debian, Ubuntu), Windows Server, Active Directory, Bash, Git</dd>
+        <dt>Réseaux</dt><dd>TCP/IP, VLAN, subnetting, Packet Tracer</dd>
+        <dt>Cloud &amp; virtualisation</dt><dd>AWS (EC2, RDS, S3), Docker, Proxmox, VirtualBox</dd>
+        <dt>Sécurité</dt><dd>Nmap, Nessus, Hydra, John the Ripper, Kali Linux</dd>
+        <dt>Développement</dt><dd>Python, HTML / CSS, JavaScript, PHP, MySQL</dd>
+        <dt>Outils</dt><dd>GLPI, OCS Inventory, Pack Office, GanttProject</dd>
+      </dl>
     </section>
 
     <!-- Certifications -->
@@ -146,12 +170,12 @@
     <!-- Veille -->
     <section id="veille">
       <h2>Veille technologique</h2>
-      <div class="card">
+      <article class="card">
         <h3>Les agents IA autonomes : nouvelle menace et nouvel outil en cybersécurité</h3>
         <p>Comment l'émergence des agents IA autonomes redéfinit-elle les menaces et les mécanismes de défense des systèmes d'information ?</p>
-        <a href="https://itsocial.fr/cybersecurite/cybersecurite-actualites/ransomware-3-0-anatomie-dune-attaque-automatisees-menee-de-bout-en-bout-par-lia/" target="_blank" rel="noopener" class="more">Article : Ransomware 3.0 →</a>
-        <a href="img/Veille.mm" download class="more">Télécharger la veille →</a>
-      </div>
+        <a href="https://itsocial.fr/cybersecurite/cybersecurite-actualites/ransomware-3-0-anatomie-dune-attaque-automatisees-menee-de-bout-en-bout-par-lia/" target="_blank" rel="noopener" class="more">Article : Ransomware 3.0</a>
+        <a href="img/Veille.mm" download class="more">Télécharger la veille</a>
+      </article>
     </section>
 
     <!-- Procédures -->
@@ -169,17 +193,27 @@
     <!-- Formation -->
     <section id="formation">
       <h2>Formation</h2>
-      <ul class="timeline">
-        <li><strong>BTS SIO option SISR</strong> – Lycée Turgot, Paris <small>2025 – 2027</small></li>
-        <li><strong>Bac STMG option RH</strong> – Lycée Gustave Eiffel, Rueil-Malmaison <small>2023 – 2025</small></li>
-      </ul>
+      <article class="row-item">
+        <div class="row-side">2025 – 2027</div>
+        <div class="row-main">
+          <h3>BTS SIO option SISR</h3>
+          <p class="meta">Lycée Turgot, Paris</p>
+        </div>
+      </article>
+      <article class="row-item">
+        <div class="row-side">2023 – 2025</div>
+        <div class="row-main">
+          <h3>Bac STMG option RH</h3>
+          <p class="meta">Lycée Gustave Eiffel, Rueil-Malmaison</p>
+        </div>
+      </article>
     </section>
 
     <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <form class="card form" action="https://formspree.io/f/xrbnylwa" method="POST">
-        <div class="row">
+        <div class="form-row">
           <label>Nom<input type="text" name="nom" required></label>
           <label>Prénom<input type="text" name="prenom" required></label>
         </div>
@@ -192,6 +226,6 @@
 
   </main>
 
-  <footer>© 2026 Fellah Zakariya</footer>
+  <footer>© 2026 Zakariya Fellah</footer>
 </body>
 </html>

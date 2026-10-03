@@ -63,7 +63,26 @@
       </article>
     </section>
 
-    
+    <!-- Projets -->
+    <section id="projets">
+      <h2>Projets</h2>
+      <div class="grid projects-wide">
+        <article class="card project">
+          <img src="img/Architecture AWS - Statique .drawio.png" alt="Infrastructure AWS" class="project-media"></img>
+          <h3>Infrastructure AWS pour une application conteneurisée</h3>
+          <p>Conception et déploiement d'une infrastructure cloud sur AWS pour héberger une application web, avec une chaîne CI/CD automatisée. Projet principal de mon stage chez Consultas Group.</p>
+        <ul class="bullets">
+          <li><strong>IAM</strong> : gestion des identités et des droits d'accès aux ressources selon le principe du moindre privilège</li>
+          <li><strong>VPC &amp; Security Groups</strong> : réseau isolé, seuls les ports nécessaires sont exposés, base de données inaccessible depuis Internet</li>
+          <li><strong>EC2 + Elastic IP</strong> : instance hébergeant les conteneurs Docker, avec adresse publique fixe</li>
+          <li><strong>RDS (MariaDB)</strong> : base de données managée, séparée de la couche applicative</li>
+          <li><strong>S3</strong> : stockage des fichiers statiques de l'application</li>
+          <li><strong>CI/CD</strong> : tests et build via GitHub Actions, déploiement continu avec Coolify</li>
+          <li><strong>CloudWatch + SNS</strong> : supervision de l'instance (métriques, alarmes) et notifications automatiques en cas d'incident</li>
+        </ul>
+          <div class="tags"><span>AWS</span><span>IAM</span><span>VPC</span><span>EC2</span><span>RDS</span><span>S3</span><span>Docker</span><span>GitHub Actions</span><span>CloudWatch</span><span>SNS</span></div>
+        </article>
+
 
         <article class="card project">
           <img src="img/IPW.jpg" alt="Infrastructure Proxmox" class="project-media">
@@ -88,26 +107,6 @@
       </div>
     </section>
 
-    <!-- Projets -->
-    <section id="projets">
-      <h2>Projets</h2>
-      <div class="grid projects-wide">
-        <article class="card project">
-          <img src="img/Architecture AWS - Statique .drawio.png.jpg" alt="Infrastructure AWS" class="project-media"></img>
-          <h3>Infrastructure AWS pour une application conteneurisée</h3>
-          <p>Conception et déploiement d'une infrastructure cloud sur AWS pour héberger une application web, avec une chaîne CI/CD automatisée. Projet principal de mon stage chez Consultas Group.</p>
-        <ul class="bullets">
-          <li><strong>IAM</strong> : gestion des identités et des droits d'accès aux ressources selon le principe du moindre privilège</li>
-          <li><strong>VPC &amp; Security Groups</strong> : réseau isolé, seuls les ports nécessaires sont exposés, base de données inaccessible depuis Internet</li>
-          <li><strong>EC2 + Elastic IP</strong> : instance hébergeant les conteneurs Docker, avec adresse publique fixe</li>
-          <li><strong>RDS (MariaDB)</strong> : base de données managée, séparée de la couche applicative</li>
-          <li><strong>S3</strong> : stockage des fichiers statiques de l'application</li>
-          <li><strong>CI/CD</strong> : tests et build via GitHub Actions, déploiement continu avec Coolify</li>
-          <li><strong>CloudWatch + SNS</strong> : supervision de l'instance (métriques, alarmes) et notifications automatiques en cas d'incident</li>
-        </ul>
-          <div class="tags"><span>AWS</span><span>IAM</span><span>VPC</span><span>EC2</span><span>RDS</span><span>S3</span><span>Docker</span><span>GitHub Actions</span><span>CloudWatch</span><span>SNS</span></div>
-        </article>
-        
     <!-- CTF -->
     <section id="ctf">
       <h2>Compétitions CTF</h2>

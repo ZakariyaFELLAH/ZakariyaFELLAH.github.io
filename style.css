@@ -257,3 +257,37 @@ footer {
   .skills dd { border-top: none !important; padding-top: 0; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* ===== Projets en pleine largeur ===== */
+.projects-wide {
+  grid-template-columns: 1fr;          /* une seule colonne : chaque projet prend toute la largeur */
+}
+
+.projects-wide .project {
+  display: grid;
+  grid-template-columns: 300px 1fr;    /* image à gauche (300px), texte à droite */
+  grid-auto-rows: min-content;
+}
+
+.projects-wide .project-media {
+  grid-column: 1;
+  grid-row: 1 / span 10;               /* l'image occupe toute la hauteur de la carte */
+  height: 100%;
+  min-height: 220px;
+  border-bottom: none;
+  border-right: 1px solid var(--line);
+}
+
+.projects-wide .project > :not(.project-media) {
+  grid-column: 2;                      /* tout le texte dans la colonne de droite */
+}
+
+/* Sur mobile : on revient à l'image au-dessus */
+@media (max-width: 760px) {
+  .projects-wide .project { grid-template-columns: 1fr; }
+  .projects-wide .project-media {
+    grid-row: auto; height: 190px; min-height: 0;
+    border-right: none; border-bottom: 1px solid var(--line);
+  }
+  .projects-wide .project > :not(.project-media) { grid-column: 1; }
+}

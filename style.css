@@ -37,7 +37,12 @@ a:hover { text-decoration: underline; }
 }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 600; font-size: 0.95em; }
 .brand:hover { text-decoration: none; }
-.tux { width: 26px; height: 26px; display: block; }
+.zf {
+  height: 38px;          /* plus grand et lisible */
+  width: auto;           /* la largeur suit les proportions de l'image */
+  object-fit: contain;   /* jamais déformé */
+  display: block;
+}
 .nav nav { display: flex; flex-wrap: wrap; gap: 20px; }
 .nav nav a { color: var(--muted); font-size: 0.88em; font-weight: 500; }
 .nav nav a:hover { color: var(--ink); text-decoration: none; }

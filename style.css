@@ -128,6 +128,8 @@ h3 { font-size: 1.02em; font-weight: 600; margin: 0 0 4px; }
 .more { display: inline-block; margin-right: 18px; font-size: 0.88em; font-weight: 600; }
 .more::after { content: " →"; }
 
+.profile { display: inline-block; margin-right: 18px; font-size: 0.88em; font-weight: 600; }
+
 /* ========== Lignes (expérience / formation) ========== */
 .row-item {
   display: grid; grid-template-columns: 140px 1fr; gap: 24px;

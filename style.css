@@ -379,3 +379,5 @@ footer {
   text-decoration: underline;
   text-underline-offset: 3px;   /* le soulignement ne colle pas au texte */
 }
+
+.more { width: fit-content; }

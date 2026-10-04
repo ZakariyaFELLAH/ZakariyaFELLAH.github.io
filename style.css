@@ -367,3 +367,15 @@ footer {
   }
   .projects-wide .project > :not(.project-media) { grid-column: 1; }
 }
+
+/* ===== Lien noir → vert souligné au survol ===== */
+.link-dark {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.link-dark:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;   /* le soulignement ne colle pas au texte */
+}

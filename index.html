@@ -357,20 +357,22 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <form class="card form" action="https://formspree.io/f/xrbnylwa" method="POST">
-        <div class="form-row">
-          <label>Nom<input type="text" name="nom" required></label>
-          <label>Prénom<input type="text" name="prenom" required></label>
-        </div>
-        <label>E-mail<input type="email" name="email" required></label>
-        <label>Message<textarea name="message" rows="5" maxlength="1000" required></textarea></label>
-        <label class="agree"><input type="checkbox" required> J'accepte que mes données soient utilisées pour me recontacter.</label>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-grid">
 
-      <aside class="contact-info">
+    <form class="card form" action="https://formspree.io/f/xrbnylwa" method="POST">
+      <div class="form-row">
+        <label>Nom<input type="text" name="nom" required></label>
+        <label>Prénom<input type="text" name="prenom" required></label>
+      </div>
+      <label>E-mail<input type="email" name="email" required></label>
+      <label>Message<textarea name="message" rows="5" maxlength="1000" required></textarea></label>
+      <label class="agree"><input type="checkbox" required> J'accepte que mes données soient utilisées pour me recontacter.</label>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+
+    <aside class="contact-info">
       <p class="contact-intro">Recherche d'alternance ou de stage : n'hésitez pas à me contacter.</p>
       <ul>
         <li>
@@ -391,8 +393,9 @@
         </li>
       </ul>
     </aside>
-    
-    </section>
+
+  </div>
+</section>
 
   </main>
 

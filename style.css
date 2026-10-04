@@ -49,7 +49,7 @@ a:hover { text-decoration: underline; }
 
 /* ========== Mise en page ========== */
 main { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-section { padding: 64px 0 0; scroll-margin-top: 64px; }
+section { padding: 64px 0 0; scroll-margin-top: 96px; }
 
 h2 {
   font-size: 1.35em; font-weight: 700; letter-spacing: -0.01em;
@@ -111,12 +111,6 @@ h3 { font-size: 1.02em; font-weight: 600; margin: 0 0 4px; }
 .card:hover { border-color: #cbd5e1; }
 .card p { margin: 6px 0 14px; color: var(--muted); font-size: 0.93em; }
 .card .tags { margin-top: auto; }
-.card-icon {
-  display: grid; place-items: center;
-  width: 36px; height: 36px; margin-bottom: 14px;
-  border-radius: 8px;
-  background: var(--accent-soft); color: var(--accent); font-size: 1.15em;
-}
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .tags span {
@@ -125,10 +119,8 @@ h3 { font-size: 1.02em; font-weight: 600; margin: 0 0 4px; }
   background: #f1f5f9; color: #475569;
 }
 
-.more { display: inline-block; margin-right: 18px; font-size: 0.88em; font-weight: 600; }
+.more { display: inline-block; width: fit-content; margin-right: 18px; font-size: 0.88em; font-weight: 600; }
 .more::after { content: " →"; }
-
-.profile { display: inline-block; margin-right: 18px; font-size: 0.88em; font-weight: 600; }
 
 /* ========== Lignes (expérience / formation) ========== */
 .row-item {
@@ -147,13 +139,10 @@ h3 { font-size: 1.02em; font-weight: 600; margin: 0 0 4px; }
 .project > h3 { margin-top: 18px; }
 .project > .more { margin-bottom: 20px; align-self: flex-start; }
 .project > .tags:last-child { margin-bottom: 20px; }
+.project > .bullets { margin-left: 22px; margin-right: 22px; margin-top: 0; }
 .project-media {
   width: 100%; height: 190px; display: block;
   object-fit: cover; border-bottom: 1px solid var(--line);
-}
-.project-media.placeholder {
-  display: grid; place-items: center;
-  background: var(--accent-soft); color: var(--accent); font-size: 2.6em;
 }
 
 /* ========== CTF ========== */
@@ -164,14 +153,11 @@ h3 { font-size: 1.02em; font-weight: 600; margin: 0 0 4px; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
+  transition: border-color 0.15s;
 }
+.ctf:hover { border-color: #cbd5e1; }
 .ctf-media { width: 100%; height: 100%; min-height: 170px; object-fit: cover; border-right: 1px solid var(--line); }
-.ctf-media.placeholder {
-  display: grid; place-items: center;
-  background: var(--accent-soft); color: var(--accent); font-size: 2.6em;
-}
 .ctf-body { padding: 18px 22px; }
-.project > .bullets { margin-left: 22px; margin-right: 22px; margin-top: 0; }
 .ctf-body p:not(.meta) { margin: 0 0 10px; color: var(--muted); font-size: 0.93em; }
 .badge {
   display: inline-block; margin-bottom: 8px;
@@ -297,6 +283,7 @@ h3 { font-size: 1.02em; font-weight: 600; margin: 0 0 4px; }
 .form .agree { flex-direction: row; align-items: center; gap: 10px; font-weight: 400; color: var(--muted); }
 .form .agree input { accent-color: var(--accent); width: 16px; height: 16px; }
 .form .btn { align-self: flex-start; }
+.form:hover { border-color: var(--line); }
 
 /* ========== Footer ========== */
 footer {
@@ -380,4 +367,34 @@ footer {
   text-underline-offset: 3px;   /* le soulignement ne colle pas au texte */
 }
 
-.more { width: fit-content; }
+/* ===== Contact : formulaire + infos ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;   /* formulaire à gauche, infos à droite */
+  gap: 24px;
+  align-items: start;
+}
+.contact-grid .form { max-width: none; }
+
+.contact-info {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.contact-intro { margin: 0 0 18px; color: var(--muted); font-size: 0.9em; }
+.contact-info ul { list-style: none; margin: 0; padding: 0; }
+.contact-info li { display: flex; align-items: center; gap: 12px; }
+.contact-info li + li { margin-top: 16px; }
+.contact-icon {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent); font-size: 1.1em;
+}
+.contact-info small { display: block; color: var(--muted); font-size: 0.75em; }
+.contact-info a, .contact-info span:not(.contact-icon) { font-size: 0.9em; font-weight: 500; word-break: break-all; }
+
+/* Mobile : les infos passent sous le formulaire */
+@media (max-width: 760px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
